@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101412">
+<title>Ses → Fotoğraf · Merve'nin SSTV deneyi</title>
+<meta name="description" content="Fotoğrafı ses olarak gönder. Telefonunun mikrofonuyla dinle, görüntünün oluşmasını izle. Robot36 SSTV deneyi.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23101412'/%3E%3Cpath d='M6 16h4l3-9 5 18 3-9h5' fill='none' stroke='%23c7fb67' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="shell">
+<header><a class="brand" href="./" aria-label="Ses Fotoğraf ana sayfa"><span class="brand-icon">≋</span> SES <span class="muted">/</span> FOTOĞRAF</a><span class="badge">MERVE'NİN DENEYİ</span></header>
+<div class="intro"><p class="eyebrow">BİR SESİN İÇİNDEKİ GÖRÜNTÜ</p><h1>Dinle. Fotoğraf ortaya çıksın.</h1><p>Bir cihaz sesi çalsın, diğeri dinlesin. Aradaki tek bağlantı ses.</p></div>
+<nav class="tabs" aria-label="İşlem seçimi"><button id="receiveTab" class="tab active" aria-pressed="true">01 <strong>Fotoğraf al</strong><span>Telefonda aç</span></button><button id="sendTab" class="tab" aria-pressed="false">02 <strong>Fotoğraf gönder</strong><span>Diğer cihazda aç</span></button></nav>
+<section id="receivePanel" class="workspace">
+<div class="image-panel"><div class="panel-top"><span>ALINAN GÖRÜNTÜ</span><span class="mono">320 × 240</span></div><div class="screen"><canvas id="receiveCanvas" width="320" height="240" aria-label="Sesten çözülen fotoğraf"></canvas><div id="emptyState" class="empty"><span class="empty-mark">▧</span><strong>Burada bir fotoğraf belirecek.</strong><span>Önce dinlemeyi başlat, sonra diğer cihazdan sesi çal.</span></div><div id="scanline" hidden></div></div><div class="progress-track"><div id="progressFill"></div></div><div class="panel-bottom"><span id="lineLabel">0 / 240 satır</span><span id="percentLabel">%0</span></div></div>
+<aside class="controls"><div class="status-label">ALICI</div><h2 id="receiveStatus" aria-live="polite">Dinlemeye hazır</h2><p id="receiveHint">Telefonunu sesi çalacak hoparlöre yaklaştır. Ortam sessiz, ses seviyesi orta olsun.</p><button class="primary" id="listenButton">Mikrofonla dinlemeyi başlat</button><div class="level-header"><label for="levelMeter">Mikrofon seviyesi</label><span id="levelLabel">Kapalı</span></div><meter id="levelMeter" min="0" max="1" value="0">0</meter><p class="small" id="signalHint">Mikrofon yalnızca düğmeye bastığında açılır.</p><div class="secondary-actions"><button id="resetButton" class="secondary">Görüntüyü temizle</button><button id="saveButton" class="secondary" disabled>PNG kaydet</button></div><details><summary>Ses var ama görüntü gelmiyor mu?</summary><p>Gönderen cihazda Robot36 kullan. Önce bu sayfada dinlemeyi başlat, ardından sesin tamamını baştan çal. Bluetooth kulaklığı çıkar; telefonun ekranını açık tut.</p><p id="secureHint">Telefonunda Safari veya Chrome kullan ve mikrofon iznine izin ver.</p></details><p class="mode-label">Robot36 · Renkli görüntü · Yaklaşık 37 sn</p></aside>
+</section>
+<section id="sendPanel" class="workspace" hidden>
+<div class="image-panel"><div class="panel-top"><span>GÖNDERİLECEK FOTOĞRAF</span><span class="mono">320 × 240</span></div><div class="screen"><canvas id="sendCanvas" width="320" height="240" aria-label="Gönderilecek fotoğraf önizlemesi"></canvas><div id="sendEmpty" class="empty"><span class="empty-mark">＋</span><strong>Bir fotoğraf seç.</strong><span>Fotoğraf cihazında kalır.</span></div></div><div class="progress-track"><div id="sendProgress"></div></div><div class="panel-bottom"><span id="fileLabel">Henüz fotoğraf seçilmedi</span><span id="sendTime">00:00</span></div></div>
+<aside class="controls"><div class="status-label">GÖNDERİCİ</div><h2>Fotoğrafını sese çevir.</h2><p>Bu bölümü bilgisayarda aç. Telefonda “Fotoğraf al” bölümünü açıp dinlemeyi başlat.</p><label class="upload-button" for="photoInput">Fotoğraf seç<input id="photoInput" type="file" accept="image/*"></label><button class="secondary full" id="sampleButton">Fotoğrafsız dene: renk kartını seç</button><div class="volume-row"><label for="volume">Ses seviyesi</label><output id="volumeLabel">%50</output></div><input id="volume" type="range" min="5" max="100" value="50"><button class="primary" id="playButton" disabled>Sesi çal · Fotoğrafı gönder</button><button class="secondary full" id="wavButton" disabled>ESP için WAV indir</button><p id="sendStatus" class="small" aria-live="polite">Önce bir fotoğraf veya renk kartı seç.</p><p class="mode-label">Fotoğraf, çerçeveye sığdırılarak gönderilir.</p></aside>
+</section>
+<div id="message" class="message" role="alert" hidden></div>
+<footer><span>Fotoğraf ve mikrofon sesi sunucuya gönderilmez.</span><a href="about.html">SSTV nasıl çalışıyor?</a></footer>
+</main><script type="module" src="app.js"></script>
+</body></html>
