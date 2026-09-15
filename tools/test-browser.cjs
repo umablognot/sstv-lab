@@ -1,7 +1,8 @@
-const {chromium}=require('C:/Users/merve/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const {chromium}=require('playwright');
 const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
 (async()=>{
-const browser=await chromium.launch({channel:'msedge',headless:true,args:['--use-fake-ui-for-media-stream','--use-fake-device-for-media-stream','--use-file-for-fake-audio-capture='+path.resolve('test-output/microphone.wav')+'%noloop']});
+assert.ok(fs.existsSync('test-output/microphone.wav'),'Run npm test first to generate the microphone fixture.');
+const browser=await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL||undefined,headless:true,args:['--use-fake-ui-for-media-stream','--use-fake-device-for-media-stream','--use-file-for-fake-audio-capture='+path.resolve('test-output/microphone.wav')+'%noloop']});
 try{const context=await browser.newContext({permissions:['microphone'],viewport:{width:1280,height:900}});const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));
 await page.addInitScript(()=>{document.modelContext={registered:[],registerTool(tool){this.registered.push(tool);}};});
 await page.goto('http://127.0.0.1:5188');await page.screenshot({path:'test-output/desktop.png',fullPage:true});
@@ -16,7 +17,7 @@ await page.locator('#listenButton').click();await page.waitForFunction(()=>docum
 assert.equal(await page.locator('#lineLabel').textContent(),'240 / 240 satır');assert.equal(await page.locator('#saveButton').isEnabled(),true);await page.screenshot({path:'test-output/received.png',fullPage:true});
 const rx=await page.evaluate(()=>Array.from(document.querySelector('#receiveCanvas').getContext('2d').getImageData(0,0,320,240).data));fs.writeFileSync('test-output/browser-received.rgba',Buffer.from(rx));
 await page.locator('#resetButton').click();assert.equal(await page.locator('#lineLabel').textContent(),'0 / 240 satır');assert.equal(await page.locator('#saveButton').isEnabled(),false);assert.deepEqual(errors,[]);
-console.log(JSON.stringify({browser:'Edge Chromium',desktop:true,mobile:true,download:true,playStop:true,microphonePipeline:'240/240 rows',webmcpContract:true,errors}));
+console.log(JSON.stringify({browser:process.env.PLAYWRIGHT_CHANNEL||'Chromium',desktop:true,mobile:true,download:true,playStop:true,microphonePipeline:'240/240 rows',webmcpContract:true,errors}));
 const deniedContext=await browser.newContext();await deniedContext.grantPermissions([]);const denied=await deniedContext.newPage();await denied.addInitScript(()=>{navigator.mediaDevices.getUserMedia=async()=>{throw new DOMException('denied','NotAllowedError');};});await denied.goto('http://127.0.0.1:5188');await denied.locator('#listenButton').click();await denied.waitForFunction(()=>!document.querySelector('#message').hidden);assert.ok((await denied.locator('#message').textContent()).includes('Mikrofon izni verilmedi'));console.log('Microphone denial: PASS');
 }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

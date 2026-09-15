@@ -1,1 +1,30 @@
-{"name":"ses-fotograf","private":true,"type":"module","scripts":{"dev":"node serve.mjs","test":"node tools/test-dsp.mjs"}}
+{
+  "name": "sstv-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Browser-based Robot36 SSTV encoder and acoustic decoder. Send a photo as sound from one device, decode it with the microphone of another.",
+  "keywords": ["sstv", "robot36", "web-audio", "dsp", "fm-demodulation", "ham-radio", "audioworklet"],
+  "homepage": "https://altunsumerve.github.io/sstv-lab/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/altunsumerve/sstv-lab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/altunsumerve/sstv-lab/issues"
+  },
+  "license": "MIT",
+  "author": "Merve Altunsu",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node serve.mjs",
+    "test": "node tools/test-dsp.mjs && node tools/test-frame.mjs && node --test tools/test-counter.mjs tools/test-attempt-lifecycle.mjs",
+    "test:acoustic": "node tools/test-acoustic.mjs",
+    "test:browser": "node tools/test-browser.cjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.47.0"
+  }
+}

@@ -52,7 +52,9 @@ export class SyncDetector {
         const lowestFrequency = 1000;
         const highestFrequency = 2800;
         const cutoffFrequency = (highestFrequency - lowestFrequency) / 2;
-        const baseBandLowPassSeconds = 0.002;
+        // A longer band-pass rejects handling rumble and nearby speech harmonics.
+        // Its group delay is shared by VIS, sync and pixel measurements.
+        const baseBandLowPassSeconds = 0.008;
         const baseBandLowPassSamples = Math.round(baseBandLowPassSeconds * sampleRate) | 1;
         this.baseBandLowPass = ComplexConvolution.createLowPassFilter(baseBandLowPassSamples, cutoffFrequency, sampleRate);
         this.centerFrequency = (lowestFrequency + highestFrequency) / 2;
