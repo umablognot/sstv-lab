@@ -93,8 +93,7 @@ request IP address and normal connection metadata.
 
 Honest caveats:
 
-- The endpoint is public, so anyone can inflate the numbers with `curl`. Read them as indicative,
-  not audited.
+- The counters give an approximate indication of usage; they are not verified analytics.
 - These are approximate browser counts, not a count of unique people. Clearing site data, using
   another browser, blocking storage or simultaneous first visits can count the same person again.
 - Counters run only at `https://altunsumerve.github.io/sstv-lab/`. Local previews, temporary

@@ -94,8 +94,7 @@ IP adresini ve olağan bağlantı bilgilerini görebilir.
 
 Dürüst uyarılar:
 
-- Endpoint herkese açık, yani isteyen `curl` ile sayıyı şişirebilir. Sayıları fikir verici kabul et,
-  denetlenmiş veri olarak değil.
+- Sayaçlar kullanım hakkında yaklaşık bir fikir verir; doğrulanmış istatistikler değildir.
 - Bu yaklaşık bir tarayıcı sayısıdır; benzersiz kişi sayısı değildir. Site verisini temizlemek,
   başka tarayıcı kullanmak, depolamayı engellemek veya eşzamanlı ilk ziyaretler tekrar sayılabilir.
 - Sayaçlar yalnızca `https://altunsumerve.github.io/sstv-lab/` adresinde çalışır. Yerel önizleme,
