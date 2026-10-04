@@ -1,0 +1,487 @@
+# SSTV Lab — UI strings.
+# Language: Simplified Chinese (zh-CN).
+# Source catalogs live next to the compiled ones; edit this file and
+# recompile with: node tools/msgfmt.mjs
+msgid ""
+msgstr ""
+"Project-Id-Version: sstv-lab 2.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/altunsumerve/sstv-lab/issues\n"
+"POT-Creation-Date: 2025-09-15 12:00+0000\n"
+"PO-Revision-Date: 2025-09-15 12:00+0000\n"
+"Last-Translator: SSTV Lab translators\n"
+"Language-Team: SSTV Lab <https://github.com/altunsumerve/sstv-lab>\n"
+"Language: zh-CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: sstv-lab msgfmt pipeline\n"
+"X-Domain: messages\n"
+
+msgid "brand.sub"
+msgstr "实验室"
+
+msgid "stats.visitors"
+msgstr "访客"
+
+msgid "stats.attempts"
+msgstr "接收次数"
+
+msgid "toolbar.install"
+msgstr "安装应用"
+
+msgid "toolbar.language"
+msgstr "语言"
+
+msgid "status.online"
+msgstr "在线"
+
+msgid "status.offline"
+msgstr "离线"
+
+msgid "intro.eyebrow"
+msgstr "藏在声音里的图像"
+
+msgid "intro.title"
+msgstr "听。照片浮现。"
+
+msgid "intro.text"
+msgstr "一台设备播放声音，另一台聆听。两者之间唯一的纽带是声音——或者二维码、蓝牙和 NFC，全部离线可用。"
+
+msgid "tab.receive.title"
+msgstr "接收照片"
+
+msgid "tab.receive.hint"
+msgstr "在手机上打开"
+
+msgid "tab.send.title"
+msgstr "发送照片"
+
+msgid "tab.send.hint"
+msgstr "在另一台设备上打开"
+
+msgid "tab.devices.title"
+msgstr "传输通道"
+
+msgid "rx.panel.title"
+msgstr "接收到的图像"
+
+msgid "rx.empty.title"
+msgstr "照片会出现在这里。"
+
+msgid "rx.empty.text"
+msgstr "先开始聆听，再从另一台设备播放声音。"
+
+msgid "rx.status.label"
+msgstr "接收端"
+
+msgid "rx.status.ready"
+msgstr "准备聆听"
+
+msgid "rx.hint.ready"
+msgstr "把设备靠近将要播放声音的扬声器。保持房间安静，音量适中。"
+
+msgid "rx.button.start"
+msgstr "开始用麦克风聆听"
+
+msgid "rx.button.stop"
+msgstr "停止聆听"
+
+msgid "rx.button.permission"
+msgstr "等待麦克风权限…"
+
+msgid "rx.level.label"
+msgstr "麦克风电平"
+
+msgid "rx.level.off"
+msgstr "关闭"
+
+msgid "rx.level.silent"
+msgstr "非常安静"
+
+msgid "rx.hint.security"
+msgstr "只有按下按钮时麦克风才会开启。"
+
+msgid "rx.hint.off"
+msgstr "麦克风已关闭。没有录制任何音频。"
+
+msgid "rx.button.reset"
+msgstr "清除图像"
+
+msgid "rx.button.save"
+msgstr "保存 PNG"
+
+msgid "rx.help.title"
+msgstr "有声音却没有图像？"
+
+msgid "rx.help.body1"
+msgstr "发送端请使用 Robot36。先在本页开始聆听，然后从头完整播放声音。断开蓝牙耳机；保持屏幕常亮。"
+
+msgid "rx.help.secure"
+msgstr "在手机上使用 Safari 或 Chrome，并允许麦克风权限。"
+
+msgid "rx.mode"
+msgstr "Robot36 · 彩色图像 · 约 37 秒"
+
+msgid "rx.status.waiting"
+msgstr "等待声音…"
+
+msgid "rx.status.found"
+msgstr "找到 Robot36 起始信号"
+
+msgid "rx.status.lost"
+msgstr "信号丢失"
+
+msgid "rx.hint.lost"
+msgstr "聆听仍在进行。重新播放声音；新照片的起始点会被自动找到。"
+
+msgid "rx.status.building"
+msgstr "照片正在生成…"
+
+msgid "rx.hint.building"
+msgstr "不间断地把声音播完。保持屏幕常亮。"
+
+msgid "rx.status.incomplete"
+msgstr "部分行未收到"
+
+msgid "rx.hint.incomplete"
+msgstr "信号被中断。重新开始聆听，并从头重播声音。"
+
+msgid "rx.status.done"
+msgstr "照片已收到！"
+
+msgid "rx.hint.done"
+msgstr "声音已变成图像。你可以把照片保存为 PNG。"
+
+msgid "rx.status.stopped"
+msgstr "聆听已停止"
+
+msgid "rx.lines"
+msgstr "{rows} / 240 行"
+
+msgid "rx.percent"
+msgstr "%{percent}"
+
+msgid "rx.error.decode"
+msgstr "无法解码声音。请重新开始聆听。"
+
+msgid "rx.error.worker"
+msgstr "音频处理器无法启动。刷新页面后重试。"
+
+msgid "rx.error.secure"
+msgstr "要使用麦克风，请通过 HTTPS 在 Safari 或 Chrome 中打开本页。局域网中的 http:// 地址无法在手机上启用麦克风。"
+
+msgid "rx.error.notallowed"
+msgstr "麦克风权限未授予。请在浏览器站点设置中允许麦克风，然后重试。"
+
+msgid "rx.error.notfound"
+msgstr "未找到麦克风。请在有麦克风的手机或电脑上打开本页。"
+
+msgid "rx.error.notreadable"
+msgstr "麦克风无法打开。请关闭其他正在使用麦克风的程序后重试。"
+
+msgid "rx.error.generic"
+msgstr "麦克风无法启动。请使用最新版 Safari 或 Chrome 重试。"
+
+msgid "rx.signal.loud"
+msgstr "声音太大。请稍调低发送设备的音量。"
+
+msgid "rx.signal.quiet"
+msgstr "几乎听不到声音。请把设备靠近扬声器。"
+
+msgid "rx.signal.receiving"
+msgstr "正在接收声音。传输进行中。"
+
+msgid "rx.signal.open"
+msgstr "麦克风已开启。等待 Robot36 起始信号。"
+
+msgid "tx.panel.title"
+msgstr "要发送的照片"
+
+msgid "tx.empty.title"
+msgstr "选择一张照片。"
+
+msgid "tx.empty.text"
+msgstr "照片只保留在你的设备上。"
+
+msgid "tx.status.label"
+msgstr "发送端"
+
+msgid "tx.title"
+msgstr "把照片变成声音。"
+
+msgid "tx.text"
+msgstr "在电脑上打开本节。在手机上打开「接收照片」并开始聆听。"
+
+msgid "tx.button.choose"
+msgstr "选择照片"
+
+msgid "tx.button.camera"
+msgstr "拍摄照片"
+
+msgid "tx.button.sample"
+msgstr "没有照片也可试：选择彩条测试卡"
+
+msgid "tx.volume"
+msgstr "音量"
+
+msgid "tx.button.play"
+msgstr "播放声音 · 发送照片"
+
+msgid "tx.button.stop"
+msgstr "停止发送"
+
+msgid "tx.button.wav"
+msgstr "下载为 WAV"
+
+msgid "tx.status.none"
+msgstr "请先选择一张照片或彩条测试卡。"
+
+msgid "tx.status.ready"
+msgstr "就绪。先在手机上开始聆听，然后在这里播放声音。"
+
+msgid "tx.status.sending"
+msgstr "照片正以声音形式发送。请勿在后台播放其他声音。"
+
+msgid "tx.status.done"
+msgstr "声音播放完毕。请在手机上确认照片是否收到。"
+
+msgid "tx.status.resend"
+msgstr "就绪。你可以再次发送照片。"
+
+msgid "tx.status.wav"
+msgstr "WAV 已就绪：16 kHz · 单声道 · 16 位 PCM。"
+
+msgid "tx.file.none"
+msgstr "尚未选择照片"
+
+msgid "tx.error.size"
+msgstr "请选择小于 25 MB 的照片。"
+
+msgid "tx.error.open"
+msgstr "无法打开这张照片。请重新以 JPG、PNG 或 WebP 格式选择。"
+
+msgid "tx.error.encode"
+msgstr "请先选择照片。"
+
+msgid "tx.error.play"
+msgstr "声音无法播放。请在 Safari 或 Chrome 中打开页面后重试。"
+
+msgid "tx.sample.name"
+msgstr "Robot36 彩条测试卡"
+
+msgid "tx.drop.hint"
+msgstr "也可以拖放或粘贴一张照片。"
+
+msgid "tx.bg.hidden"
+msgstr "页面转入后台，传输已停止。请保持屏幕常亮并重新开始。"
+
+msgid "tx.mode"
+msgstr "照片会按比例适配画面。"
+
+msgid "dv.badge.offline"
+msgstr "离线"
+
+msgid "dv.qr.title"
+msgstr "二维码传输"
+
+msgid "dv.qr.desc"
+msgstr "照片被拆分成连续的二维码。把另一台设备的相机对准屏幕——无声且完全离线。"
+
+msgid "dv.qr.send"
+msgstr "用二维码发送"
+
+msgid "dv.qr.stop"
+msgstr "停止二维码流"
+
+msgid "dv.qr.receive"
+msgstr "用相机接收"
+
+msgid "dv.qr.receiveStop"
+msgstr "停止相机"
+
+msgid "dv.qr.save"
+msgstr "保存收到的照片"
+
+msgid "dv.qr.speed"
+msgstr "帧时长"
+
+msgid "dv.qr.progress"
+msgstr "已接收 {got}/{total} 帧"
+
+msgid "dv.qr.frameOf"
+msgstr "正在显示第 {index} / {frames} 帧"
+
+msgid "dv.qr.needPhoto"
+msgstr "请先在「发送照片」标签页中选择一张照片。"
+
+msgid "dv.qr.generating"
+msgstr "正在生成二维码帧…"
+
+msgid "dv.qr.noCamera"
+msgstr "无法打开相机。"
+
+msgid "dv.qr.unsupported"
+msgstr "二维码解码需要相机和 jsQR；此浏览器不支持。"
+
+msgid "dv.qr.done"
+msgstr "已通过二维码收到照片！"
+
+msgid "dv.qr.tooBig"
+msgstr "这张照片对二维码流来说太大（超过 1 MB）。请选择更小的照片。"
+
+msgid "dv.qr.hint"
+msgstr "发送设备显示码，接收设备扫描码。保持 20–40 厘米距离。"
+
+msgid "dv.bt.title"
+msgstr "蓝牙传输"
+
+msgid "dv.bt.desc"
+msgstr "在两台支持 Web Bluetooth 的设备之间通过蓝牙 LE（Nordic UART）发送照片，或把声学传输路由到蓝牙音箱。"
+
+msgid "dv.bt.pick"
+msgstr "选择音频输出"
+
+msgid "dv.bt.audioOk"
+msgstr "已选择输出：{name}"
+
+msgid "dv.bt.audioFail"
+msgstr "此浏览器不支持选择音频输出。"
+
+msgid "dv.bt.send"
+msgstr "通过蓝牙发送"
+
+msgid "dv.bt.receive"
+msgstr "通过蓝牙接收"
+
+msgid "dv.bt.disconnect"
+msgstr "断开连接"
+
+msgid "dv.bt.connected"
+msgstr "已连接：{name}"
+
+msgid "dv.bt.connecting"
+msgstr "连接中…"
+
+msgid "dv.bt.disconnected"
+msgstr "已断开。"
+
+msgid "dv.bt.progress"
+msgstr "发送中… {percent}%"
+
+msgid "dv.bt.done"
+msgstr "照片已通过蓝牙发送。"
+
+msgid "dv.bt.received"
+msgstr "已通过蓝牙收到照片！"
+
+msgid "dv.bt.unsupported"
+msgstr "此浏览器不支持 Web Bluetooth。请使用 Chrome 或 Edge（桌面版或 Android）。"
+
+msgid "dv.bt.failed"
+msgstr "蓝牙连接失败。请确认对方设备正在广播 Nordic UART 服务。"
+
+msgid "dv.bt.listening"
+msgstr "正在等待通过蓝牙传来的照片…"
+
+msgid "dv.nfc.title"
+msgstr "NFC 配对"
+
+msgid "dv.nfc.desc"
+msgstr "把两台手机背靠背碰一碰：另一台会以预设的正确角色打开本页。"
+
+msgid "dv.nfc.write"
+msgstr "写入配对标签"
+
+msgid "dv.nfc.read"
+msgstr "读取配对标签"
+
+msgid "dv.nfc.ready"
+msgstr "把标签或另一台手机靠近设备背面。"
+
+msgid "dv.nfc.written"
+msgstr "标签已写入。它现在会以接收模式打开本页。"
+
+msgid "dv.nfc.readOk"
+msgstr "已读取邀请——另一台设备将以「{role}」模式打开。"
+
+msgid "dv.nfc.unsupported"
+msgstr "Web NFC 仅在 Android 版 Chrome 中可用。"
+
+msgid "dv.nfc.failed"
+msgstr "NFC 操作失败。请更稳地握持设备后重试。"
+
+msgid "dv.nfc.role.rx"
+msgstr "接收"
+
+msgid "dv.nfc.role.tx"
+msgstr "发送"
+
+msgid "dv.sound.title"
+msgstr "声音检测"
+
+msgid "dv.sound.desc"
+msgstr "在真正传输前，播放三个 SSTV 校准音来验证扬声器通路。"
+
+msgid "dv.sound.play"
+msgstr "播放测试音"
+
+msgid "dv.sound.stop"
+msgstr "停止测试音"
+
+msgid "dv.sound.playing"
+msgstr "正在播放 1500 → 1900 → 2300 Hz…"
+
+msgid "dv.sound.done"
+msgstr "检测完成。"
+
+msgid "footer.privacy"
+msgstr "照片和麦克风音频绝不会上传到服务器。"
+
+msgid "footer.about"
+msgstr "SSTV 是如何工作的？"
+
+msgid "about.back"
+msgstr "← 返回实验"
+
+msgid "about.title"
+msgstr "这个声音里藏着一张照片。"
+
+msgid "about.p1"
+msgstr "SSTV 把照片的亮度和颜色转换为音频音调。接收端测量这些音调，逐行重建图像。"
+
+msgid "about.p2"
+msgstr "本实验使用 Robot36：一张 320 × 240 像素的彩色图像连同起始信号约在 37 秒内发送完毕。此初版不支持其他 SSTV 模式。"
+
+msgid "about.p3"
+msgstr "在手机上先打开麦克风，然后从另一台设备完整播放声音。让手机靠近扬声器，避免音量过大和背景音乐。传输期间保持屏幕常亮。"
+
+msgid "about.p4"
+msgstr "照片选择和声音解码都在你的设备上完成。本应用绝不会把你的照片或麦克风音频上传到服务器。加载页面只需联网一次；照片传输本身通过声音进行。安装应用后即可完全离线使用。"
+
+msgid "about.channels.title"
+msgstr "移动照片的四种方式"
+
+msgid "about.channels.sound"
+msgstr "声音——经典声学通道。任何带有扬声器和麦克风的两台设备之间均可使用，无需配对。"
+
+msgid "about.channels.qr"
+msgstr "二维码——照片被拆分为连续的二维码；另一台设备用相机读取。无声且完全离线。"
+
+msgid "about.channels.bt"
+msgstr "蓝牙——照片在两台 Web Bluetooth 设备之间通过蓝牙 LE 传输，或者声学传输在蓝牙音箱上播放。"
+
+msgid "about.channels.nfc"
+msgstr "NFC——碰一碰即可配对手机，并在每台设备上打开正确的角色。"
+
+msgid "about.counters.title"
+msgstr "关于计数器"
+
+msgid "about.counters.p"
+msgstr "页眉中的计数器由免费计数服务保存。它们显示不同浏览器和接收尝试的近似次数；并不统计唯一用户。当麦克风聆听成功启动时，尝试计数器加一。图像未完成或缺失也会计入；完整接收不会重复计数。若麦克风无法打开，则不计入。离线时计数器会隐藏。"
+
+msgid "about.langs.title"
+msgstr "语言"
+
+msgid "about.langs.p"
+msgstr "界面支持土耳其语、英语、德语、西班牙语、法语、阿拉伯语（从右到左）和简体中文。翻译保存在 locales/ 下的标准 GNU gettext 文件中（.po 源文件、.mo 编译文件）——欢迎提交 Pull Request 添加你的语言。"

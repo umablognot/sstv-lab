@@ -1,0 +1,487 @@
+# SSTV Lab — UI strings.
+# Language: Turkish (tr).
+# Source catalogs live next to the compiled ones; edit this file and
+# recompile with: node tools/msgfmt.mjs
+msgid ""
+msgstr ""
+"Project-Id-Version: sstv-lab 2.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/altunsumerve/sstv-lab/issues\n"
+"POT-Creation-Date: 2025-09-15 12:00+0000\n"
+"PO-Revision-Date: 2025-09-15 12:00+0000\n"
+"Last-Translator: Merve Altunsu\n"
+"Language-Team: SSTV Lab <https://github.com/altunsumerve/sstv-lab>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: sstv-lab msgfmt pipeline\n"
+"X-Domain: messages\n"
+
+msgid "brand.sub"
+msgstr "FOTOĞRAF"
+
+msgid "stats.visitors"
+msgstr "ZİYARETÇİ"
+
+msgid "stats.attempts"
+msgstr "ALIM DENEMESİ"
+
+msgid "toolbar.install"
+msgstr "Uygulamayı yükle"
+
+msgid "toolbar.language"
+msgstr "Dil"
+
+msgid "status.online"
+msgstr "Çevrimiçi"
+
+msgid "status.offline"
+msgstr "Çevrimdışı"
+
+msgid "intro.eyebrow"
+msgstr "BİR SESİN İÇİNDEKİ GÖRÜNTÜ"
+
+msgid "intro.title"
+msgstr "Dinle. Fotoğraf ortaya çıksın."
+
+msgid "intro.text"
+msgstr "Bir cihaz sesi çalsın, diğeri dinlesin. Aradaki tek bağlantı ses — ya da tamamen çevrimdışı çalışan QR, Bluetooth ve NFC."
+
+msgid "tab.receive.title"
+msgstr "Fotoğraf al"
+
+msgid "tab.receive.hint"
+msgstr "Telefonda aç"
+
+msgid "tab.send.title"
+msgstr "Fotoğraf gönder"
+
+msgid "tab.send.hint"
+msgstr "Diğer cihazda aç"
+
+msgid "tab.devices.title"
+msgstr "Kanallar"
+
+msgid "rx.panel.title"
+msgstr "ALINAN GÖRÜNTÜ"
+
+msgid "rx.empty.title"
+msgstr "Burada bir fotoğraf belirecek."
+
+msgid "rx.empty.text"
+msgstr "Önce dinlemeyi başlat, sonra diğer cihazdan sesi çal."
+
+msgid "rx.status.label"
+msgstr "ALICI"
+
+msgid "rx.status.ready"
+msgstr "Dinlemeye hazır"
+
+msgid "rx.hint.ready"
+msgstr "Telefonunu sesi çalacak hoparlöre yaklaştır. Ortam sessiz, ses seviyesi orta olsun."
+
+msgid "rx.button.start"
+msgstr "Mikrofonla dinlemeyi başlat"
+
+msgid "rx.button.stop"
+msgstr "Dinlemeyi durdur"
+
+msgid "rx.button.permission"
+msgstr "Mikrofon izni bekleniyor…"
+
+msgid "rx.level.label"
+msgstr "Mikrofon seviyesi"
+
+msgid "rx.level.off"
+msgstr "Kapalı"
+
+msgid "rx.level.silent"
+msgstr "Çok sessiz"
+
+msgid "rx.hint.security"
+msgstr "Mikrofon yalnızca düğmeye bastığında açılır."
+
+msgid "rx.hint.off"
+msgstr "Mikrofon kapalı. Ses kaydı yapılmıyor."
+
+msgid "rx.button.reset"
+msgstr "Görüntüyü temizle"
+
+msgid "rx.button.save"
+msgstr "PNG kaydet"
+
+msgid "rx.help.title"
+msgstr "Ses var ama görüntü gelmiyor mu?"
+
+msgid "rx.help.body1"
+msgstr "Gönderen cihazda Robot36 kullan. Önce bu sayfada dinlemeyi başlat, ardından sesin tamamını baştan çal. Bluetooth kulaklığı çıkar; telefonun ekranını açık tut."
+
+msgid "rx.help.secure"
+msgstr "Telefonunda Safari veya Chrome kullan ve mikrofon iznine izin ver."
+
+msgid "rx.mode"
+msgstr "Robot36 · Renkli görüntü · Yaklaşık 37 sn"
+
+msgid "rx.status.waiting"
+msgstr "Ses bekleniyor…"
+
+msgid "rx.status.found"
+msgstr "Robot36 başlangıcı bulundu"
+
+msgid "rx.status.lost"
+msgstr "Sinyal kesildi"
+
+msgid "rx.hint.lost"
+msgstr "Dinleme açık. Sesi baştan çal; yeni fotoğrafın başlangıcı otomatik bulunacak."
+
+msgid "rx.status.building"
+msgstr "Fotoğraf oluşuyor…"
+
+msgid "rx.hint.building"
+msgstr "Sesi kesmeden sonuna kadar çal. Telefonun ekranını açık tut."
+
+msgid "rx.status.incomplete"
+msgstr "Bazı satırlar alınamadı"
+
+msgid "rx.hint.incomplete"
+msgstr "Sinyalde kesinti oldu. Dinlemeyi yeniden başlatıp sesi baştan çal."
+
+msgid "rx.status.done"
+msgstr "Fotoğraf alındı!"
+
+msgid "rx.hint.done"
+msgstr "Ses görüntüye dönüştü. Fotoğrafı PNG olarak kaydedebilirsin."
+
+msgid "rx.status.stopped"
+msgstr "Dinleme durduruldu"
+
+msgid "rx.lines"
+msgstr "{rows} / 240 satır"
+
+msgid "rx.percent"
+msgstr "%{percent}"
+
+msgid "rx.error.decode"
+msgstr "Ses çözülemedi. Dinlemeyi yeniden başlat."
+
+msgid "rx.error.worker"
+msgstr "Ses işleyicisi açılamadı. Sayfayı yenileyip tekrar dene."
+
+msgid "rx.error.secure"
+msgstr "Mikrofon için bu sayfayı HTTPS bağlantısından Safari veya Chrome ile aç. Yerel ağdaki http:// adresi telefonda mikrofonu açamaz."
+
+msgid "rx.error.notallowed"
+msgstr "Mikrofon izni verilmedi. Tarayıcının site ayarlarından mikrofona izin verip tekrar dene."
+
+msgid "rx.error.notfound"
+msgstr "Mikrofon bulunamadı. Bu sayfayı mikrofonu olan telefon veya bilgisayarda aç."
+
+msgid "rx.error.notreadable"
+msgstr "Mikrofon açılamadı. Mikrofonu kullanan başka uygulamaları kapatıp tekrar dene."
+
+msgid "rx.error.generic"
+msgstr "Mikrofon başlatılamadı. Güncel Safari veya Chrome ile tekrar dene."
+
+msgid "rx.signal.loud"
+msgstr "Ses fazla yüksek. Gönderen cihazın sesini biraz azalt."
+
+msgid "rx.signal.quiet"
+msgstr "Çok az ses geliyor. Telefonu hoparlöre yaklaştır."
+
+msgid "rx.signal.receiving"
+msgstr "Ses alınıyor. Aktarım devam ediyor."
+
+msgid "rx.signal.open"
+msgstr "Mikrofon açık. Robot36 başlangıcı bekleniyor."
+
+msgid "tx.panel.title"
+msgstr "GÖNDERİLECEK FOTOĞRAF"
+
+msgid "tx.empty.title"
+msgstr "Bir fotoğraf seç."
+
+msgid "tx.empty.text"
+msgstr "Fotoğraf cihazında kalır."
+
+msgid "tx.status.label"
+msgstr "GÖNDERİCİ"
+
+msgid "tx.title"
+msgstr "Fotoğrafını sese çevir."
+
+msgid "tx.text"
+msgstr "Bu bölümü bilgisayarda aç. Telefonda “Fotoğraf al” bölümünü açıp dinlemeyi başlat."
+
+msgid "tx.button.choose"
+msgstr "Fotoğraf seç"
+
+msgid "tx.button.camera"
+msgstr "Fotoğraf çek"
+
+msgid "tx.button.sample"
+msgstr "Fotoğrafsız dene: renk kartını seç"
+
+msgid "tx.volume"
+msgstr "Ses seviyesi"
+
+msgid "tx.button.play"
+msgstr "Sesi çal · Fotoğrafı gönder"
+
+msgid "tx.button.stop"
+msgstr "Göndermeyi durdur"
+
+msgid "tx.button.wav"
+msgstr "WAV olarak indir"
+
+msgid "tx.status.none"
+msgstr "Önce bir fotoğraf veya renk kartı seç."
+
+msgid "tx.status.ready"
+msgstr "Hazır. Önce telefonda dinlemeyi başlat, sonra burada sesi çal."
+
+msgid "tx.status.sending"
+msgstr "Fotoğraf ses olarak gönderiliyor. Arka planda başka ses çalma."
+
+msgid "tx.status.done"
+msgstr "Ses tamamlandı. Fotoğrafın alındığını telefondan kontrol et."
+
+msgid "tx.status.resend"
+msgstr "Hazır. Fotoğrafı tekrar gönderebilirsin."
+
+msgid "tx.status.wav"
+msgstr "WAV hazır: 16 kHz · mono · 16 bit PCM."
+
+msgid "tx.file.none"
+msgstr "Henüz fotoğraf seçilmedi"
+
+msgid "tx.error.size"
+msgstr "Lütfen 25 MB’den küçük bir fotoğraf seç."
+
+msgid "tx.error.open"
+msgstr "Bu fotoğraf açılamadı. JPG, PNG veya WebP olarak tekrar seç."
+
+msgid "tx.error.encode"
+msgstr "Önce fotoğraf seç."
+
+msgid "tx.error.play"
+msgstr "Ses çalınamadı. Sayfayı Safari veya Chrome’da açıp tekrar dene."
+
+msgid "tx.sample.name"
+msgstr "Robot36 renk kartı"
+
+msgid "tx.drop.hint"
+msgstr "Ayrıca fotoğrafı sürükleyip bırakabilir veya yapıştırabilirsin."
+
+msgid "tx.bg.hidden"
+msgstr "Sayfa arka plana geçtiği için aktarım durduruldu. Ekranı açık tutarak yeniden başlat."
+
+msgid "tx.mode"
+msgstr "Fotoğraf, çerçeveye sığdırılarak gönderilir."
+
+msgid "dv.badge.offline"
+msgstr "çevrimdışı"
+
+msgid "dv.qr.title"
+msgstr "QR kod ile aktarım"
+
+msgid "dv.qr.desc"
+msgstr "Fotoğraf ardışık QR kodlarına bölünür. Diğer cihazın kamerasını ekrana tut — sessiz ve tamamen çevrimdışı."
+
+msgid "dv.qr.send"
+msgstr "QR ile gönder"
+
+msgid "dv.qr.stop"
+msgstr "QR akışını durdur"
+
+msgid "dv.qr.receive"
+msgstr "Kamerayla al"
+
+msgid "dv.qr.receiveStop"
+msgstr "Kamerayı durdur"
+
+msgid "dv.qr.save"
+msgstr "Alınan fotoğrafı kaydet"
+
+msgid "dv.qr.speed"
+msgstr "Kare süresi"
+
+msgid "dv.qr.progress"
+msgstr "{got}/{total} kare alındı"
+
+msgid "dv.qr.frameOf"
+msgstr "{index} / {frames} kare gösteriliyor"
+
+msgid "dv.qr.needPhoto"
+msgstr "Önce “Fotoğraf gönder” sekmesinde bir fotoğraf seç."
+
+msgid "dv.qr.generating"
+msgstr "QR kareleri hazırlanıyor…"
+
+msgid "dv.qr.noCamera"
+msgstr "Kamera açılamadı."
+
+msgid "dv.qr.unsupported"
+msgstr "QR çözümü kamera ve jsQR gerektirir; bu tarayıcı desteklemiyor."
+
+msgid "dv.qr.done"
+msgstr "Fotoğraf QR ile alındı!"
+
+msgid "dv.qr.tooBig"
+msgstr "Bu fotoğraf QR akışı için fazla büyük (1 MB üzeri). Daha küçük bir fotoğraf seç."
+
+msgid "dv.qr.hint"
+msgstr "Gönderen cihaz kodları gösterir, alan cihaz tarar. Mesafeyi 20–40 cm tutun."
+
+msgid "dv.bt.title"
+msgstr "Bluetooth ile aktarım"
+
+msgid "dv.bt.desc"
+msgstr "Fotoğrafı iki Web Bluetooth cihazı arasında Bluetooth LE (Nordic UART) ile gönder ya da akustik aktarımı Bluetooth hoparlöre yönlendir."
+
+msgid "dv.bt.pick"
+msgstr "Ses çıkışı seç"
+
+msgid "dv.bt.audioOk"
+msgstr "Çıkış seçildi: {name}"
+
+msgid "dv.bt.audioFail"
+msgstr "Bu tarayıcıda çıkış seçimi desteklenmiyor."
+
+msgid "dv.bt.send"
+msgstr "Bluetooth ile gönder"
+
+msgid "dv.bt.receive"
+msgstr "Bluetooth ile al"
+
+msgid "dv.bt.disconnect"
+msgstr "Bağlantıyı kes"
+
+msgid "dv.bt.connected"
+msgstr "Bağlandı: {name}"
+
+msgid "dv.bt.connecting"
+msgstr "Bağlanıyor…"
+
+msgid "dv.bt.disconnected"
+msgstr "Bağlantı kesildi."
+
+msgid "dv.bt.progress"
+msgstr "Gönderiliyor… %{percent}"
+
+msgid "dv.bt.done"
+msgstr "Fotoğraf Bluetooth ile gönderildi."
+
+msgid "dv.bt.received"
+msgstr "Fotoğraf Bluetooth ile alındı!"
+
+msgid "dv.bt.unsupported"
+msgstr "Bu tarayıcı Web Bluetooth desteklemiyor. Chrome veya Edge (masaüstü veya Android) kullan."
+
+msgid "dv.bt.failed"
+msgstr "Bluetooth bağlantısı kurulamadı. Karşı cihazın Nordic UART servisini yayınladığından emin ol."
+
+msgid "dv.bt.listening"
+msgstr "Bluetooth üzerinden fotoğraf bekleniyor…"
+
+msgid "dv.nfc.title"
+msgstr "NFC eşleştirme"
+
+msgid "dv.nfc.desc"
+msgstr "Telefonları sırt sırta değdir: karşı telefon bu sayfayı doğru rolle açar."
+
+msgid "dv.nfc.write"
+msgstr "Eşleştirme etiketi yaz"
+
+msgid "dv.nfc.read"
+msgstr "Eşleştirme etiketi oku"
+
+msgid "dv.nfc.ready"
+msgstr "Etiketi veya diğer telefonu arkaya yaklaştır."
+
+msgid "dv.nfc.written"
+msgstr "Etiket yazıldı. Artık bu sayfayı alıcı modunda açar."
+
+msgid "dv.nfc.readOk"
+msgstr "Davet okundu — karşı cihaz “{role}” modunda açılır."
+
+msgid "dv.nfc.unsupported"
+msgstr "Web NFC yalnızca Android için Chrome’da çalışır."
+
+msgid "dv.nfc.failed"
+msgstr "NFC işlemi başarısız oldu. Cihazı daha sabit tutup tekrar dene."
+
+msgid "dv.nfc.role.rx"
+msgstr "alıcı"
+
+msgid "dv.nfc.role.tx"
+msgstr "gönderici"
+
+msgid "dv.sound.title"
+msgstr "Ses testi"
+
+msgid "dv.sound.desc"
+msgstr "Gerçek aktarımdan önce hoparlör yolunu doğrulamak için üç SSTV kalibrasyon tonunu çal."
+
+msgid "dv.sound.play"
+msgstr "Test tonlarını çal"
+
+msgid "dv.sound.stop"
+msgstr "Tonları durdur"
+
+msgid "dv.sound.playing"
+msgstr "1500 → 1900 → 2300 Hz çalıyor…"
+
+msgid "dv.sound.done"
+msgstr "Test tamamlandı."
+
+msgid "footer.privacy"
+msgstr "Fotoğraf ve mikrofon sesi sunucuya gönderilmez."
+
+msgid "footer.about"
+msgstr "SSTV nasıl çalışıyor?"
+
+msgid "about.back"
+msgstr "← Deneye dön"
+
+msgid "about.title"
+msgstr "Bu sesin içinde bir fotoğraf var."
+
+msgid "about.p1"
+msgstr "SSTV, bir fotoğrafın parlaklık ve renk bilgisini ses tonlarına dönüştürür. Alıcı bu tonları ölçer ve görüntüyü satır satır yeniden oluşturur."
+
+msgid "about.p2"
+msgstr "Bu deney Robot36 kullanır: 320 × 240 piksel renkli bir görüntü, başlangıç sinyaliyle birlikte yaklaşık 37 saniyede gönderilir. Diğer SSTV modları bu ilk sürümde desteklenmez."
+
+msgid "about.p3"
+msgstr "Telefonda önce mikrofonu aç, sonra diğer cihazdan sesin tamamını çal. Telefonu hoparlöre yakın tut, aşırı yüksek sesten ve arka plan müziğinden kaçın. Aktarım sırasında ekran açık kalsın."
+
+msgid "about.p4"
+msgstr "Fotoğraf seçimi ve ses çözümü cihazında yapılır. Uygulama fotoğrafını veya mikrofon sesini sunucuya göndermez. Sayfanın yüklenmesi yalnızca bir kez internet gerektirir; fotoğraf aktarımı sesle gerçekleşir. Uygulamayı yükledikten sonra tamamen çevrimdışı çalışır."
+
+msgid "about.channels.title"
+msgstr "Bir fotoğrafı taşımanın dört yolu"
+
+msgid "about.channels.sound"
+msgstr "Ses — klasik akustik yol. Hoparlör ve mikrofonu olan iki cihaz arasında, eşleştirme olmadan çalışır."
+
+msgid "about.channels.qr"
+msgstr "QR kod — fotoğraf ardışık QR kodlarına bölünür; karşı cihaz kamerasıyla okur. Sessiz ve tamamen çevrimdışı."
+
+msgid "about.channels.bt"
+msgstr "Bluetooth — fotoğraf iki Web Bluetooth cihazı arasında Bluetooth LE ile taşınır veya akustik aktarım Bluetooth hoparlörde çalınır."
+
+msgid "about.channels.nfc"
+msgstr "NFC — telefonları değdirerek eşleştirir ve her birinde doğru rolü açar."
+
+msgid "about.counters.title"
+msgstr "Sayaçlar hakkında"
+
+msgid "about.counters.p"
+msgstr "Başlıktaki sayaçlar ücretsiz bir sayaç servisinde tutulur. Yaklaşık farklı tarayıcı ve alım denemesi sayısını gösterir; benzersiz kişi sayısını ölçmez. Mikrofonla dinleme başarıyla başlatıldığında deneme sayacı bir artar. Görüntü yarım kalsa veya hiç oluşmasa da sayılır; tamamlanınca ikinci kez sayılmaz. Mikrofon açılamazsa sayaç eklenmez. Çevrimdışıyken sayaçlar gizlenir."
+
+msgid "about.langs.title"
+msgstr "Diller"
+
+msgid "about.langs.p"
+msgstr "Arayüz Türkçe, İngilizce, Almanca, İspanyolca, Fransızca, Arapça (sağdan sola) ve Basitleştirilmiş Çince konuşur. Çeviriler locales/ altındaki standart GNU gettext dosyalarında (.po kaynak, .mo derlenmiş) tutulur — kendi dilinizi eklemek için bir pull request gönderin."

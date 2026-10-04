@@ -1,0 +1,487 @@
+# SSTV Lab — UI strings.
+# Language: Arabic (ar).
+# Source catalogs live next to the compiled ones; edit this file and
+# recompile with: node tools/msgfmt.mjs
+msgid ""
+msgstr ""
+"Project-Id-Version: sstv-lab 2.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/altunsumerve/sstv-lab/issues\n"
+"POT-Creation-Date: 2025-09-15 12:00+0000\n"
+"PO-Revision-Date: 2025-09-15 12:00+0000\n"
+"Last-Translator: SSTV Lab translators\n"
+"Language-Team: SSTV Lab <https://github.com/altunsumerve/sstv-lab>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5)\n"
+"X-Generator: sstv-lab msgfmt pipeline\n"
+"X-Domain: messages\n"
+
+msgid "brand.sub"
+msgstr "مختبر"
+
+msgid "stats.visitors"
+msgstr "زائر"
+
+msgid "stats.attempts"
+msgstr "عمليات الاستقبال"
+
+msgid "toolbar.install"
+msgstr "تثبيت التطبيق"
+
+msgid "toolbar.language"
+msgstr "اللغة"
+
+msgid "status.online"
+msgstr "متصل"
+
+msgid "status.offline"
+msgstr "غير متصل"
+
+msgid "intro.eyebrow"
+msgstr "صورة داخل صوت"
+
+msgid "intro.title"
+msgstr "استمع. تظهر الصورة."
+
+msgid "intro.text"
+msgstr "جهاز يشغّل الصوت وآخر يستمع. الرابط الوحيد بينهما هو الصوت — أو رمز QR والبلوتوث و NFC، وكلها تعمل دون إنترنت."
+
+msgid "tab.receive.title"
+msgstr "استلام صورة"
+
+msgid "tab.receive.hint"
+msgstr "افتح على الهاتف"
+
+msgid "tab.send.title"
+msgstr "إرسال صورة"
+
+msgid "tab.send.hint"
+msgstr "افتح على الجهاز الآخر"
+
+msgid "tab.devices.title"
+msgstr "القنوات"
+
+msgid "rx.panel.title"
+msgstr "الصورة المستلمة"
+
+msgid "rx.empty.title"
+msgstr "ستظهر صورة هنا."
+
+msgid "rx.empty.text"
+msgstr "ابدأ الاستماع أولًا، ثم شغّل الصوت من الجهاز الآخر."
+
+msgid "rx.status.label"
+msgstr "المستقبل"
+
+msgid "rx.status.ready"
+msgstr "جاهز للاستماع"
+
+msgid "rx.hint.ready"
+msgstr "أمسك الهاتف قريبًا من مكبر الصوت الذي سيشغّل الصوت. اجعل الغرفة هادئة ومستوى الصوت معتدلًا."
+
+msgid "rx.button.start"
+msgstr "ابدأ الاستماع بالميكروفون"
+
+msgid "rx.button.stop"
+msgstr "إيقاف الاستماع"
+
+msgid "rx.button.permission"
+msgstr "في انتظار إذن الميكروفون…"
+
+msgid "rx.level.label"
+msgstr "مستوى الميكروفون"
+
+msgid "rx.level.off"
+msgstr "مغلق"
+
+msgid "rx.level.silent"
+msgstr "صوت خافت جدًا"
+
+msgid "rx.hint.security"
+msgstr "لا يُفتح الميكروفون إلا عند الضغط على الزر."
+
+msgid "rx.hint.off"
+msgstr "الميكروفون مغلق. لا يتم تسجيل أي صوت."
+
+msgid "rx.button.reset"
+msgstr "مسح الصورة"
+
+msgid "rx.button.save"
+msgstr "حفظ PNG"
+
+msgid "rx.help.title"
+msgstr "الصوت يعمل لكن لا تظهر الصورة؟"
+
+msgid "rx.help.body1"
+msgstr "استخدم Robot36 على جهاز الإرسال. ابدأ الاستماع في هذه الصفحة أولًا، ثم شغّل الصوت كاملًا من البداية. افصل سماعات البلوتوث؛ وأبقِ شاشة الهاتف مضاءة."
+
+msgid "rx.help.secure"
+msgstr "على هاتفك استخدم Safari أو Chrome وامنح إذن الميكروفون."
+
+msgid "rx.mode"
+msgstr "Robot36 · صورة ملوّنة · نحو 37 ثانية"
+
+msgid "rx.status.waiting"
+msgstr "في انتظار الصوت…"
+
+msgid "rx.status.found"
+msgstr "تم العثور على بداية Robot36"
+
+msgid "rx.status.lost"
+msgstr "فُقدت الإشارة"
+
+msgid "rx.hint.lost"
+msgstr "الاستماع لا يزال يعمل. أعد تشغيل الصوت؛ ستُكتشف بداية صورة جديدة تلقائيًا."
+
+msgid "rx.status.building"
+msgstr "جارٍ تكوين الصورة…"
+
+msgid "rx.hint.building"
+msgstr "شغّل الصوت حتى النهاية دون انقطاع. أبقِ الشاشة مضاءة."
+
+msgid "rx.status.incomplete"
+msgstr "لم تُستلم بعض الصفوف"
+
+msgid "rx.hint.incomplete"
+msgstr "انقطعت الإشارة. أعد تشغيل الاستماع ثم أعد تشغيل الصوت من البداية."
+
+msgid "rx.status.done"
+msgstr "تم استلام الصورة!"
+
+msgid "rx.hint.done"
+msgstr "تحوّل الصوت إلى صورة. يمكنك حفظ الصورة بصيغة PNG."
+
+msgid "rx.status.stopped"
+msgstr "توقف الاستماع"
+
+msgid "rx.lines"
+msgstr "{rows} / 240 صفًا"
+
+msgid "rx.percent"
+msgstr "%{percent}"
+
+msgid "rx.error.decode"
+msgstr "تعذّر فك ترميز الصوت. أعد تشغيل الاستماع."
+
+msgid "rx.error.worker"
+msgstr "تعذّر تشغيل معالج الصوت. أعد تحميل الصفحة وحاول مرة أخرى."
+
+msgid "rx.error.secure"
+msgstr "للميكروفون، افتح هذه الصفحة عبر HTTPS باستخدام Safari أو Chrome. عنوان http:// على الشبكة المحلية لا يتيح الميكروفون على الهاتف."
+
+msgid "rx.error.notallowed"
+msgstr "لم يُمنح إذن الميكروفون. امنح الميكروفون من إعدادات الموقع في المتصفح وحاول مرة أخرى."
+
+msgid "rx.error.notfound"
+msgstr "لم يُعثر على ميكروفون. افتح هذه الصفحة على هاتف أو حاسوب فيه ميكروفون."
+
+msgid "rx.error.notreadable"
+msgstr "تعذّر فتح الميكروفون. أغلق التطبيقات الأخرى التي تستخدمه وحاول مرة أخرى."
+
+msgid "rx.error.generic"
+msgstr "تعذّر تشغيل الميكروفون. حاول مرة أخرى باستخدام Safari أو Chrome محدّث."
+
+msgid "rx.signal.loud"
+msgstr "الصوت مرتفع جدًا. اخفض قليلًا مستوى صوت جهاز الإرسال."
+
+msgid "rx.signal.quiet"
+msgstr "يصل صوت قليل جدًا. قرّب الجهاز من مكبر الصوت."
+
+msgid "rx.signal.receiving"
+msgstr "جارٍ استلام الصوت. النقل قيد التقدم."
+
+msgid "rx.signal.open"
+msgstr "الميكروفون يعمل. في انتظار إشارة بداية Robot36."
+
+msgid "tx.panel.title"
+msgstr "الصورة المرسلة"
+
+msgid "tx.empty.title"
+msgstr "اختر صورة."
+
+msgid "tx.empty.text"
+msgstr "تبقى الصورة على جهازك."
+
+msgid "tx.status.label"
+msgstr "المرسل"
+
+msgid "tx.title"
+msgstr "حوّل صورتك إلى صوت."
+
+msgid "tx.text"
+msgstr "افتح هذا القسم على الحاسوب. على الهاتف، افتح قسم «استلام صورة» وابدأ الاستماع."
+
+msgid "tx.button.choose"
+msgstr "اختيار صورة"
+
+msgid "tx.button.camera"
+msgstr "التقاط صورة"
+
+msgid "tx.button.sample"
+msgstr "جرّب دون صورة: اختر بطاقة الألوان"
+
+msgid "tx.volume"
+msgstr "مستوى الصوت"
+
+msgid "tx.button.play"
+msgstr "تشغيل الصوت · إرسال الصورة"
+
+msgid "tx.button.stop"
+msgstr "إيقاف الإرسال"
+
+msgid "tx.button.wav"
+msgstr "تنزيل بصيغة WAV"
+
+msgid "tx.status.none"
+msgstr "اختر أولًا صورة أو بطاقة الألوان."
+
+msgid "tx.status.ready"
+msgstr "جاهز. ابدأ الاستماع على الهاتف أولًا، ثم شغّل الصوت هنا."
+
+msgid "tx.status.sending"
+msgstr "جارٍ إرسال الصورة كصوت. لا تشغّل أصواتًا أخرى في الخلفية."
+
+msgid "tx.status.done"
+msgstr "انتهى الصوت. تحقق على الهاتف من استلام الصورة."
+
+msgid "tx.status.resend"
+msgstr "جاهز. يمكنك إرسال الصورة مرة أخرى."
+
+msgid "tx.status.wav"
+msgstr "ملف WAV جاهز: 16 كيلوهرتز · أحادي · PCM بدقة 16 بت."
+
+msgid "tx.file.none"
+msgstr "لم تُختر أي صورة بعد"
+
+msgid "tx.error.size"
+msgstr "اختر صورة أصغر من 25 ميغابايت."
+
+msgid "tx.error.open"
+msgstr "تعذّر فتح هذه الصورة. اخترها مجددًا بصيغة JPG أو PNG أو WebP."
+
+msgid "tx.error.encode"
+msgstr "اختر صورة أولًا."
+
+msgid "tx.error.play"
+msgstr "تعذّر تشغيل الصوت. افتح الصفحة في Safari أو Chrome وحاول مرة أخرى."
+
+msgid "tx.sample.name"
+msgstr "بطاقة ألوان Robot36"
+
+msgid "tx.drop.hint"
+msgstr "يمكنك أيضًا سحب صورة وإفلاتها أو لصقها."
+
+msgid "tx.bg.hidden"
+msgstr "توقف النقل لأن الصفحة انتقلت إلى الخلفية. أبقِ الشاشة مضاءة وابدأ من جديد."
+
+msgid "tx.mode"
+msgstr "تُدمج الصورة داخل الإطار."
+
+msgid "dv.badge.offline"
+msgstr "دون إنترنت"
+
+msgid "dv.qr.title"
+msgstr "نقل برمز QR"
+
+msgid "dv.qr.desc"
+msgstr "تُقسَّم الصورة إلى رموز QR متتالية. وجّه كاميرا الجهاز الآخر نحو الشاشة — صامت ويعمل دون إنترنت تمامًا."
+
+msgid "dv.qr.send"
+msgstr "إرسال برمز QR"
+
+msgid "dv.qr.stop"
+msgstr "إيقاف تدفق QR"
+
+msgid "dv.qr.receive"
+msgstr "استلام بالكاميرا"
+
+msgid "dv.qr.receiveStop"
+msgstr "إيقاف الكاميرا"
+
+msgid "dv.qr.save"
+msgstr "حفظ الصورة المستلمة"
+
+msgid "dv.qr.speed"
+msgstr "مدة الإطار"
+
+msgid "dv.qr.progress"
+msgstr "تم استلام {got}/{total} إطارًا"
+
+msgid "dv.qr.frameOf"
+msgstr "يُعرض الإطار {index} / {frames}"
+
+msgid "dv.qr.needPhoto"
+msgstr "اختر أولًا صورة في تبويب «إرسال صورة»."
+
+msgid "dv.qr.generating"
+msgstr "جارٍ تجهيز إطارات QR…"
+
+msgid "dv.qr.noCamera"
+msgstr "تعذّر فتح الكاميرا."
+
+msgid "dv.qr.unsupported"
+msgstr "فك ترميز QR يحتاج الكاميرا ومكتبة jsQR؛ هذا المتصفح لا يدعم ذلك."
+
+msgid "dv.qr.done"
+msgstr "تم استلام الصورة عبر QR!"
+
+msgid "dv.qr.tooBig"
+msgstr "هذه الصورة كبيرة جدًا لتدفق QR (أكثر من 1 ميغابايت). اختر أصغر منها."
+
+msgid "dv.qr.hint"
+msgstr "جهاز الإرسال يعرض الرموز، وجهاز الاستلام يمسحها ضوئيًا. حافظ على مسافة 20–40 سم."
+
+msgid "dv.bt.title"
+msgstr "نقل عبر البلوتوث"
+
+msgid "dv.bt.desc"
+msgstr "أرسل الصورة عبر البلوتوث منخفض الطاقة (Nordic UART) بين جهازين يدعمان Web Bluetooth، أو وجّه النقل الصوتي إلى مكبر بلوتوث."
+
+msgid "dv.bt.pick"
+msgstr "اختيار مخرج الصوت"
+
+msgid "dv.bt.audioOk"
+msgstr "تم اختيار المخرج: {name}"
+
+msgid "dv.bt.audioFail"
+msgstr "اختيار مخرج الصوت غير مدعوم في هذا المتصفح."
+
+msgid "dv.bt.send"
+msgstr "إرسال عبر البلوتوث"
+
+msgid "dv.bt.receive"
+msgstr "استلام عبر البلوتوث"
+
+msgid "dv.bt.disconnect"
+msgstr "قطع الاتصال"
+
+msgid "dv.bt.connected"
+msgstr "متصل: {name}"
+
+msgid "dv.bt.connecting"
+msgstr "جارٍ الاتصال…"
+
+msgid "dv.bt.disconnected"
+msgstr "تم قطع الاتصال."
+
+msgid "dv.bt.progress"
+msgstr "جارٍ الإرسال… %{percent}"
+
+msgid "dv.bt.done"
+msgstr "أُرسلت الصورة عبر البلوتوث."
+
+msgid "dv.bt.received"
+msgstr "تم استلام الصورة عبر البلوتوث!"
+
+msgid "dv.bt.unsupported"
+msgstr "هذا المتصفح لا يدعم Web Bluetooth. استخدم Chrome أو Edge (سطح المكتب أو Android)."
+
+msgid "dv.bt.failed"
+msgstr "فشل اتصال البلوتوث. تأكد من أن الجهاز الآخر يبث خدمة Nordic UART."
+
+msgid "dv.bt.listening"
+msgstr "في انتظار صورة عبر البلوتوث…"
+
+msgid "dv.nfc.title"
+msgstr "الاقتران عبر NFC"
+
+msgid "dv.nfc.desc"
+msgstr "لامس الهاتفين ظهرًا لظهر: يفتح الهاتف الآخر هذه الصفحة بالدور الصحيح مسبقًا."
+
+msgid "dv.nfc.write"
+msgstr "كتابة وسم اقتران"
+
+msgid "dv.nfc.read"
+msgstr "قراءة وسم اقتران"
+
+msgid "dv.nfc.ready"
+msgstr "قرّب وسمًا أو الهاتف الآخر إلى الجهة الخلفية."
+
+msgid "dv.nfc.written"
+msgstr "كُتب الوسم. يفتح الآن هذه الصفحة في وضع الاستقبال."
+
+msgid "dv.nfc.readOk"
+msgstr "قُرئت الدعوة — يفتح الجهاز الآخر في وضع «{role}»."
+
+msgid "dv.nfc.unsupported"
+msgstr "تعمل ميزة Web NFC فقط في Chrome على Android."
+
+msgid "dv.nfc.failed"
+msgstr "فشلت عملية NFC. أمسك الجهاز بثبات أكثر وحاول مرة أخرى."
+
+msgid "dv.nfc.role.rx"
+msgstr "الاستقبال"
+
+msgid "dv.nfc.role.tx"
+msgstr "الإرسال"
+
+msgid "dv.sound.title"
+msgstr "اختبار الصوت"
+
+msgid "dv.sound.desc"
+msgstr "شغّل نغمات المعايرة الثلاث لـ SSTV للتحقق من مسار مكبر الصوت قبل نقل حقيقي."
+
+msgid "dv.sound.play"
+msgstr "تشغيل نغمات الاختبار"
+
+msgid "dv.sound.stop"
+msgstr "إيقاف النغمات"
+
+msgid "dv.sound.playing"
+msgstr "تشغيل 1500 ← 1900 ← 2300 هرتز…"
+
+msgid "dv.sound.done"
+msgstr "انتهى الاختبار."
+
+msgid "footer.privacy"
+msgstr "لا تُرسل الصور ولا صوت الميكروفون إلى أي خادم أبدًا."
+
+msgid "footer.about"
+msgstr "كيف يعمل SSTV؟"
+
+msgid "about.back"
+msgstr "← العودة إلى التجربة"
+
+msgid "about.title"
+msgstr "داخل هذا الصوت صورة."
+
+msgid "about.p1"
+msgstr "يحوّل SSTV سطوع الصورة وألوانها إلى نغمات صوتية. يقيس المستقبل هذه النغمات ويعيد بناء الصورة صفًا صفًا."
+
+msgid "about.p2"
+msgstr "تستخدم هذه التجربة Robot36: تُرسل صورة ملوّنة بأبعاد 320 × 240 بكسل في نحو 37 ثانية مع إشارة بداية. أوضاع SSTV الأخرى غير مدعومة في هذه النسخة الأولى."
+
+msgid "about.p3"
+msgstr "على الهاتف، فعّل الميكروفون أولًا، ثم شغّل الصوت كاملًا من الجهاز الآخر. أبقِ الهاتف قريبًا من مكبر الصوت، وتجنب الصوت المرتفع جدًا والموسيقى الخلفية. أبقِ الشاشة مضاءة أثناء النقل."
+
+msgid "about.p4"
+msgstr "يتم اختيار الصورة وفك ترميز الصوت على جهازك. لا يرسل التطبيق صورتك ولا صوت الميكروفون إلى أي خادم. يحتاج تحميل الصفحة إلى الإنترنت مرة واحدة فقط؛ أما نقل الصورة فيتم عبر الصوت. بعد التثبيت يعمل التطبيق دون إنترنت تمامًا."
+
+msgid "about.channels.title"
+msgstr "أربع طرق لنقل صورة"
+
+msgid "about.channels.sound"
+msgstr "الصوت — الطريق الصوتي الكلاسيكي. يعمل بين جهازين فيهما مكبر صوت وميكروفون دون أي اقتران."
+
+msgid "about.channels.qr"
+msgstr "رمز QR — تُقسَّم الصورة إلى رموز QR متتالية؛ يقرأها الجهاز الآخر بكاميرته. صامت ويعمل دون إنترنت تمامًا."
+
+msgid "about.channels.bt"
+msgstr "البلوتوث — تنتقل الصورة عبر البلوتوث منخفض الطاقة بين جهازين يدعمان Web Bluetooth، أو يُشغَّل النقل الصوتي على مكبر بلوتوث."
+
+msgid "about.channels.nfc"
+msgstr "NFC — اللمس يقرن الهاتفين ويفتح الدور الصحيح على كل منهما."
+
+msgid "about.counters.title"
+msgstr "حول العدّادات"
+
+msgid "about.counters.p"
+msgstr "تُحفظ عدّادات الرأس في خدمة عدّ مجانية. تعرض العدد التقريبي للمتصفحات المختلفة ومحاولات الاستقبال؛ ولا تقيس عدد الأشخاص الفريدين. يزيد عدّاد المحاولات عند بدء الاستماع بالميكروفون بنجاح. الصورة الناقصة أو المفقودة تُحسب أيضًا؛ والكاملة لا تُحسب مرتين. إذا تعذّر فتح الميكروفون فلا تُضاف أي محاولة. دون اتصال، تُخفى العدّادات."
+
+msgid "about.langs.title"
+msgstr "اللغات"
+
+msgid "about.langs.p"
+msgstr "تتحدث الواجهة التركية والإنجليزية والألمانية والإسبانية والفرنسية والعربية (من اليمين إلى اليسار) والصينية المبسطة. تُحفظ الترجمات في ملفات GNU gettext القياسية (.po مصدر و .mo مجمّعة) تحت locales/ — أرسل طلب دمج لإضافة لغتك."

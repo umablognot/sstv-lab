@@ -1,0 +1,487 @@
+# SSTV Lab — UI strings.
+# Language: French (fr).
+# Source catalogs live next to the compiled ones; edit this file and
+# recompile with: node tools/msgfmt.mjs
+msgid ""
+msgstr ""
+"Project-Id-Version: sstv-lab 2.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/altunsumerve/sstv-lab/issues\n"
+"POT-Creation-Date: 2025-09-15 12:00+0000\n"
+"PO-Revision-Date: 2025-09-15 12:00+0000\n"
+"Last-Translator: SSTV Lab translators\n"
+"Language-Team: SSTV Lab <https://github.com/altunsumerve/sstv-lab>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Generator: sstv-lab msgfmt pipeline\n"
+"X-Domain: messages\n"
+
+msgid "brand.sub"
+msgstr "LAB"
+
+msgid "stats.visitors"
+msgstr "VISITEURS"
+
+msgid "stats.attempts"
+msgstr "RÉCEPTIONS"
+
+msgid "toolbar.install"
+msgstr "Installer l'app"
+
+msgid "toolbar.language"
+msgstr "Langue"
+
+msgid "status.online"
+msgstr "En ligne"
+
+msgid "status.offline"
+msgstr "Hors ligne"
+
+msgid "intro.eyebrow"
+msgstr "UNE IMAGE DANS UN SON"
+
+msgid "intro.title"
+msgstr "Écoute. Une photo apparaît."
+
+msgid "intro.text"
+msgstr "Un appareil joue le son, l'autre écoute. Le seul lien entre eux est le son — ou le QR, le Bluetooth et le NFC, tous hors ligne."
+
+msgid "tab.receive.title"
+msgstr "Recevoir une photo"
+
+msgid "tab.receive.hint"
+msgstr "Ouvrir sur le téléphone"
+
+msgid "tab.send.title"
+msgstr "Envoyer une photo"
+
+msgid "tab.send.hint"
+msgstr "Ouvrir sur l'autre appareil"
+
+msgid "tab.devices.title"
+msgstr "Canaux"
+
+msgid "rx.panel.title"
+msgstr "IMAGE REÇUE"
+
+msgid "rx.empty.title"
+msgstr "Une photo apparaîtra ici."
+
+msgid "rx.empty.text"
+msgstr "Commence d'abord à écouter, puis joue le son depuis l'autre appareil."
+
+msgid "rx.status.label"
+msgstr "RÉCEPTEUR"
+
+msgid "rx.status.ready"
+msgstr "Prêt à écouter"
+
+msgid "rx.hint.ready"
+msgstr "Tiens l'appareil près du haut-parleur qui jouera le son. Garde la pièce silencieuse et le volume modéré."
+
+msgid "rx.button.start"
+msgstr "Écouter avec le micro"
+
+msgid "rx.button.stop"
+msgstr "Arrêter l'écoute"
+
+msgid "rx.button.permission"
+msgstr "En attente de l'autorisation micro…"
+
+msgid "rx.level.label"
+msgstr "Niveau du micro"
+
+msgid "rx.level.off"
+msgstr "Éteint"
+
+msgid "rx.level.silent"
+msgstr "Très silencieux"
+
+msgid "rx.hint.security"
+msgstr "Le micro ne s'active que lorsque tu appuies sur le bouton."
+
+msgid "rx.hint.off"
+msgstr "Micro éteint. Aucun audio n'est enregistré."
+
+msgid "rx.button.reset"
+msgstr "Effacer l'image"
+
+msgid "rx.button.save"
+msgstr "Enregistrer en PNG"
+
+msgid "rx.help.title"
+msgstr "Le son joue mais pas d'image ?"
+
+msgid "rx.help.body1"
+msgstr "Utilise Robot36 sur l'appareil émetteur. Commence d'abord à écouter sur cette page, puis joue tout le son depuis le début. Débranche les écouteurs Bluetooth ; garde l'écran allumé."
+
+msgid "rx.help.secure"
+msgstr "Sur ton téléphone, utilise Safari ou Chrome et autorise l'accès au micro."
+
+msgid "rx.mode"
+msgstr "Robot36 · Image couleur · Environ 37 s"
+
+msgid "rx.status.waiting"
+msgstr "En attente du son…"
+
+msgid "rx.status.found"
+msgstr "Début Robot36 trouvé"
+
+msgid "rx.status.lost"
+msgstr "Signal perdu"
+
+msgid "rx.hint.lost"
+msgstr "L'écoute reste active. Rejoue le son ; le début d'une nouvelle photo est trouvé automatiquement."
+
+msgid "rx.status.building"
+msgstr "La photo se forme…"
+
+msgid "rx.hint.building"
+msgstr "Joue le son jusqu'au bout sans interruption. Garde l'écran allumé."
+
+msgid "rx.status.incomplete"
+msgstr "Certaines lignes n'ont pas été reçues"
+
+msgid "rx.hint.incomplete"
+msgstr "Le signal a été interrompu. Relance l'écoute et rejoue le son depuis le début."
+
+msgid "rx.status.done"
+msgstr "Photo reçue !"
+
+msgid "rx.hint.done"
+msgstr "Le son est devenu une image. Tu peux enregistrer la photo en PNG."
+
+msgid "rx.status.stopped"
+msgstr "Écoute arrêtée"
+
+msgid "rx.lines"
+msgstr "{rows} / 240 lignes"
+
+msgid "rx.percent"
+msgstr "%{percent}"
+
+msgid "rx.error.decode"
+msgstr "Impossible de décoder le son. Relance l'écoute."
+
+msgid "rx.error.worker"
+msgstr "Impossible de démarrer le processeur audio. Recharge la page et réessaie."
+
+msgid "rx.error.secure"
+msgstr "Pour le micro, ouvre cette page en HTTPS avec Safari ou Chrome. Une adresse http:// sur le réseau local ne permet pas le micro sur un téléphone."
+
+msgid "rx.error.notallowed"
+msgstr "L'autorisation micro n'a pas été accordée. Autorise le micro dans les paramètres du site dans le navigateur et réessaie."
+
+msgid "rx.error.notfound"
+msgstr "Aucun micro trouvé. Ouvre cette page sur un téléphone ou un ordinateur équipé d'un micro."
+
+msgid "rx.error.notreadable"
+msgstr "Impossible d'ouvrir le micro. Ferme les autres applications qui l'utilisent et réessaie."
+
+msgid "rx.error.generic"
+msgstr "Le micro n'a pas pu démarrer. Réessaie avec un Safari ou Chrome à jour."
+
+msgid "rx.signal.loud"
+msgstr "Le son est trop fort. Baisse un peu le volume de l'appareil émetteur."
+
+msgid "rx.signal.quiet"
+msgstr "Très peu de son arrive. Rapproche l'appareil du haut-parleur."
+
+msgid "rx.signal.receiving"
+msgstr "Son en cours de réception. Transfert en cours."
+
+msgid "rx.signal.open"
+msgstr "Micro actif. En attente du signal de départ Robot36."
+
+msgid "tx.panel.title"
+msgstr "PHOTO À ENVOYER"
+
+msgid "tx.empty.title"
+msgstr "Choisis une photo."
+
+msgid "tx.empty.text"
+msgstr "La photo reste sur ton appareil."
+
+msgid "tx.status.label"
+msgstr "ÉMETTEUR"
+
+msgid "tx.title"
+msgstr "Transforme ta photo en son."
+
+msgid "tx.text"
+msgstr "Ouvre cette section sur l'ordinateur. Sur le téléphone, ouvre « Recevoir une photo » et commence à écouter."
+
+msgid "tx.button.choose"
+msgstr "Choisir une photo"
+
+msgid "tx.button.camera"
+msgstr "Prendre une photo"
+
+msgid "tx.button.sample"
+msgstr "Essayer sans photo : choisir la mire de couleur"
+
+msgid "tx.volume"
+msgstr "Volume"
+
+msgid "tx.button.play"
+msgstr "Jouer le son · Envoyer la photo"
+
+msgid "tx.button.stop"
+msgstr "Arrêter l'envoi"
+
+msgid "tx.button.wav"
+msgstr "Télécharger en WAV"
+
+msgid "tx.status.none"
+msgstr "Choisis d'abord une photo ou la mire de couleur."
+
+msgid "tx.status.ready"
+msgstr "Prêt. Commence d'abord à écouter sur le téléphone, puis joue le son ici."
+
+msgid "tx.status.sending"
+msgstr "La photo est envoyée sous forme de son. Ne joue pas d'autres sons en arrière-plan."
+
+msgid "tx.status.done"
+msgstr "Son terminé. Vérifie sur le téléphone que la photo a été reçue."
+
+msgid "tx.status.resend"
+msgstr "Prêt. Tu peux renvoyer la photo."
+
+msgid "tx.status.wav"
+msgstr "WAV prêt : 16 kHz · mono · PCM 16 bits."
+
+msgid "tx.file.none"
+msgstr "Aucune photo sélectionnée pour l'instant"
+
+msgid "tx.error.size"
+msgstr "Choisis une photo de moins de 25 Mo."
+
+msgid "tx.error.open"
+msgstr "Cette photo n'a pas pu être ouverte. Choisis-la à nouveau en JPG, PNG ou WebP."
+
+msgid "tx.error.encode"
+msgstr "Choisis d'abord une photo."
+
+msgid "tx.error.play"
+msgstr "Le son n'a pas pu être joué. Ouvre la page dans Safari ou Chrome et réessaie."
+
+msgid "tx.sample.name"
+msgstr "Mire de couleur Robot36"
+
+msgid "tx.drop.hint"
+msgstr "Tu peux aussi glisser-déposer ou coller une photo."
+
+msgid "tx.bg.hidden"
+msgstr "Le transfert a été arrêté car la page est passée en arrière-plan. Garde l'écran allumé et recommence."
+
+msgid "tx.mode"
+msgstr "La photo est ajustée au cadre."
+
+msgid "dv.badge.offline"
+msgstr "hors ligne"
+
+msgid "dv.qr.title"
+msgstr "Transfert par code QR"
+
+msgid "dv.qr.desc"
+msgstr "La photo est découpée en codes QR consécutifs. Pointe la caméra de l'autre appareil vers l'écran — silencieux et totalement hors ligne."
+
+msgid "dv.qr.send"
+msgstr "Envoyer par QR"
+
+msgid "dv.qr.stop"
+msgstr "Arrêter le flux QR"
+
+msgid "dv.qr.receive"
+msgstr "Recevoir avec la caméra"
+
+msgid "dv.qr.receiveStop"
+msgstr "Arrêter la caméra"
+
+msgid "dv.qr.save"
+msgstr "Enregistrer la photo reçue"
+
+msgid "dv.qr.speed"
+msgstr "Durée d'image"
+
+msgid "dv.qr.progress"
+msgstr "{got}/{total} images reçues"
+
+msgid "dv.qr.frameOf"
+msgstr "Image {index} / {frames} affichée"
+
+msgid "dv.qr.needPhoto"
+msgstr "Choisis d'abord une photo dans l'onglet « Envoyer une photo »."
+
+msgid "dv.qr.generating"
+msgstr "Préparation des images QR…"
+
+msgid "dv.qr.noCamera"
+msgstr "Impossible d'ouvrir la caméra."
+
+msgid "dv.qr.unsupported"
+msgstr "Le décodage QR nécessite la caméra et jsQR ; ce navigateur ne le prend pas en charge."
+
+msgid "dv.qr.done"
+msgstr "Photo reçue par QR !"
+
+msgid "dv.qr.tooBig"
+msgstr "Cette photo est trop grande pour le flux QR (plus de 1 Mo). Choisis-en une plus petite."
+
+msgid "dv.qr.hint"
+msgstr "L'appareil émetteur affiche les codes, le récepteur les scanne. Garde une distance de 20–40 cm."
+
+msgid "dv.bt.title"
+msgstr "Transfert Bluetooth"
+
+msgid "dv.bt.desc"
+msgstr "Envoie la photo par Bluetooth LE (Nordic UART) entre deux appareils Web Bluetooth, ou dirige le transfert acoustique vers une enceinte Bluetooth."
+
+msgid "dv.bt.pick"
+msgstr "Choisir la sortie audio"
+
+msgid "dv.bt.audioOk"
+msgstr "Sortie choisie : {name}"
+
+msgid "dv.bt.audioFail"
+msgstr "Le choix de la sortie n'est pas pris en charge par ce navigateur."
+
+msgid "dv.bt.send"
+msgstr "Envoyer par Bluetooth"
+
+msgid "dv.bt.receive"
+msgstr "Recevoir par Bluetooth"
+
+msgid "dv.bt.disconnect"
+msgstr "Déconnecter"
+
+msgid "dv.bt.connected"
+msgstr "Connecté : {name}"
+
+msgid "dv.bt.connecting"
+msgstr "Connexion…"
+
+msgid "dv.bt.disconnected"
+msgstr "Déconnecté."
+
+msgid "dv.bt.progress"
+msgstr "Envoi… {percent}%"
+
+msgid "dv.bt.done"
+msgstr "Photo envoyée par Bluetooth."
+
+msgid "dv.bt.received"
+msgstr "Photo reçue par Bluetooth !"
+
+msgid "dv.bt.unsupported"
+msgstr "Ce navigateur ne prend pas en charge Web Bluetooth. Utilise Chrome ou Edge (bureau ou Android)."
+
+msgid "dv.bt.failed"
+msgstr "La connexion Bluetooth a échoué. Vérifie que l'autre appareil diffuse bien le service Nordic UART."
+
+msgid "dv.bt.listening"
+msgstr "En attente d'une photo par Bluetooth…"
+
+msgid "dv.nfc.title"
+msgstr "Appairage NFC"
+
+msgid "dv.nfc.desc"
+msgstr "Colle les téléphones dos à dos : l'autre ouvre cette page avec le bon rôle présélectionné."
+
+msgid "dv.nfc.write"
+msgstr "Écrire une étiquette d'appairage"
+
+msgid "dv.nfc.read"
+msgstr "Lire une étiquette d'appairage"
+
+msgid "dv.nfc.ready"
+msgstr "Approche une étiquette ou l'autre téléphone de l'arrière."
+
+msgid "dv.nfc.written"
+msgstr "Étiquette écrite. Elle ouvre maintenant cette page en mode réception."
+
+msgid "dv.nfc.readOk"
+msgstr "Invitation lue — l'autre appareil s'ouvre en mode « {role} »."
+
+msgid "dv.nfc.unsupported"
+msgstr "Web NFC ne fonctionne que dans Chrome pour Android."
+
+msgid "dv.nfc.failed"
+msgstr "L'opération NFC a échoué. Tiens l'appareil plus stable et réessaie."
+
+msgid "dv.nfc.role.rx"
+msgstr "réception"
+
+msgid "dv.nfc.role.tx"
+msgstr "envoi"
+
+msgid "dv.sound.title"
+msgstr "Test du son"
+
+msgid "dv.sound.desc"
+msgstr "Joue les trois tons de calibration SSTV pour vérifier la chaîne du haut-parleur avant un vrai transfert."
+
+msgid "dv.sound.play"
+msgstr "Jouer les tons de test"
+
+msgid "dv.sound.stop"
+msgstr "Arrêter les tons"
+
+msgid "dv.sound.playing"
+msgstr "Lecture de 1500 → 1900 → 2300 Hz…"
+
+msgid "dv.sound.done"
+msgstr "Test terminé."
+
+msgid "footer.privacy"
+msgstr "Les photos et l'audio du micro ne sont jamais envoyés à un serveur."
+
+msgid "footer.about"
+msgstr "Comment fonctionne SSTV ?"
+
+msgid "about.back"
+msgstr "← Retour à l'expérience"
+
+msgid "about.title"
+msgstr "Il y a une photo dans ce son."
+
+msgid "about.p1"
+msgstr "SSTV convertit la luminosité et la couleur d'une photo en tons audio. Le récepteur mesure ces tons et reconstruit l'image ligne par ligne."
+
+msgid "about.p2"
+msgstr "Cette expérience utilise Robot36 : une image couleur de 320 × 240 pixels est envoyée en environ 37 secondes avec un signal de départ. Les autres modes SSTV ne sont pas pris en charge dans cette première version."
+
+msgid "about.p3"
+msgstr "Sur le téléphone, active d'abord le micro, puis joue tout le son depuis l'autre appareil. Tiens le téléphone près du haut-parleur, évite un volume excessif et la musique de fond. Garde l'écran allumé pendant le transfert."
+
+msgid "about.p4"
+msgstr "La sélection de la photo et le décodage du son se font sur ton appareil. L'app n'envoie jamais ta photo ni l'audio du micro à un serveur. Le chargement de la page nécessite Internet une seule fois ; le transfert de la photo se fait par le son. Après installation, l'app fonctionne totalement hors ligne."
+
+msgid "about.channels.title"
+msgstr "Quatre façons de déplacer une photo"
+
+msgid "about.channels.sound"
+msgstr "Son — la voie acoustique classique. Fonctionne entre deux appareils dotés d'un haut-parleur et d'un micro, sans appairage."
+
+msgid "about.channels.qr"
+msgstr "Code QR — la photo est découpée en codes QR consécutifs ; l'autre appareil les lit avec sa caméra. Silencieux et totalement hors ligne."
+
+msgid "about.channels.bt"
+msgstr "Bluetooth — la photo voyage par Bluetooth LE entre deux appareils Web Bluetooth, ou le transfert acoustique joue sur une enceinte Bluetooth."
+
+msgid "about.channels.nfc"
+msgstr "NFC — une touche appaire les téléphones et ouvre le bon rôle sur chacun."
+
+msgid "about.counters.title"
+msgstr "À propos des compteurs"
+
+msgid "about.counters.p"
+msgstr "Les compteurs de l'en-tête sont conservés par un service de comptage gratuit. Ils montrent le nombre approximatif de navigateurs différents et de tentatives de réception ; ils ne mesurent pas des personnes uniques. Le compteur de tentatives augmente lorsque l'écoute au micro démarre avec succès. Une image à moitié reçue ou absente compte quand même ; une image complète n'est pas comptée deux fois. Si le micro ne peut pas s'ouvrir, aucune tentative n'est ajoutée. Hors ligne, les compteurs sont masqués."
+
+msgid "about.langs.title"
+msgstr "Langues"
+
+msgid "about.langs.p"
+msgstr "L'interface parle turc, anglais, allemand, espagnol, français, arabe (de droite à gauche) et chinois simplifié. Les traductions vivent dans des fichiers GNU gettext standard (.po source, .mo compilé) sous locales/ — envoie une pull request pour ajouter la tienne."

@@ -1,0 +1,487 @@
+# SSTV Lab — UI strings.
+# Language: English (en).
+# Source catalogs live next to the compiled ones; edit this file and
+# recompile with: node tools/msgfmt.mjs
+msgid ""
+msgstr ""
+"Project-Id-Version: sstv-lab 2.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/altunsumerve/sstv-lab/issues\n"
+"POT-Creation-Date: 2025-09-15 12:00+0000\n"
+"PO-Revision-Date: 2025-09-15 12:00+0000\n"
+"Last-Translator: Merve Altunsu\n"
+"Language-Team: SSTV Lab <https://github.com/altunsumerve/sstv-lab>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: sstv-lab msgfmt pipeline\n"
+"X-Domain: messages\n"
+
+msgid "brand.sub"
+msgstr "LAB"
+
+msgid "stats.visitors"
+msgstr "VISITORS"
+
+msgid "stats.attempts"
+msgstr "RECEPTIONS"
+
+msgid "toolbar.install"
+msgstr "Install app"
+
+msgid "toolbar.language"
+msgstr "Language"
+
+msgid "status.online"
+msgstr "Online"
+
+msgid "status.offline"
+msgstr "Offline"
+
+msgid "intro.eyebrow"
+msgstr "AN IMAGE INSIDE A SOUND"
+
+msgid "intro.title"
+msgstr "Listen. A photo appears."
+
+msgid "intro.text"
+msgstr "One device plays the sound, another listens. The only link between them is sound — or QR, Bluetooth and NFC, all working offline."
+
+msgid "tab.receive.title"
+msgstr "Receive photo"
+
+msgid "tab.receive.hint"
+msgstr "Open on the phone"
+
+msgid "tab.send.title"
+msgstr "Send photo"
+
+msgid "tab.send.hint"
+msgstr "Open on the other device"
+
+msgid "tab.devices.title"
+msgstr "Channels"
+
+msgid "rx.panel.title"
+msgstr "RECEIVED IMAGE"
+
+msgid "rx.empty.title"
+msgstr "A photo will appear here."
+
+msgid "rx.empty.text"
+msgstr "Start listening first, then play the sound from the other device."
+
+msgid "rx.status.label"
+msgstr "RECEIVER"
+
+msgid "rx.status.ready"
+msgstr "Ready to listen"
+
+msgid "rx.hint.ready"
+msgstr "Hold the device close to the speaker that will play the sound. Keep the room quiet and the volume moderate."
+
+msgid "rx.button.start"
+msgstr "Start listening with the microphone"
+
+msgid "rx.button.stop"
+msgstr "Stop listening"
+
+msgid "rx.button.permission"
+msgstr "Waiting for microphone permission…"
+
+msgid "rx.level.label"
+msgstr "Microphone level"
+
+msgid "rx.level.off"
+msgstr "Off"
+
+msgid "rx.level.silent"
+msgstr "Very quiet"
+
+msgid "rx.hint.security"
+msgstr "The microphone opens only when you press the button."
+
+msgid "rx.hint.off"
+msgstr "Microphone is off. No audio is being recorded."
+
+msgid "rx.button.reset"
+msgstr "Clear image"
+
+msgid "rx.button.save"
+msgstr "Save PNG"
+
+msgid "rx.help.title"
+msgstr "Sound plays but no image?"
+
+msgid "rx.help.body1"
+msgstr "Use Robot36 on the sending device. Start listening on this page first, then play the whole sound from the beginning. Disconnect Bluetooth headsets; keep the screen on."
+
+msgid "rx.help.secure"
+msgstr "On your phone use Safari or Chrome and allow the microphone permission."
+
+msgid "rx.mode"
+msgstr "Robot36 · Color image · About 37 s"
+
+msgid "rx.status.waiting"
+msgstr "Waiting for sound…"
+
+msgid "rx.status.found"
+msgstr "Robot36 start found"
+
+msgid "rx.status.lost"
+msgstr "Signal lost"
+
+msgid "rx.hint.lost"
+msgstr "Listening stays on. Replay the sound; the start of a new photo is found automatically."
+
+msgid "rx.status.building"
+msgstr "Photo is forming…"
+
+msgid "rx.hint.building"
+msgstr "Play the sound to the end without interruption. Keep the screen awake."
+
+msgid "rx.status.incomplete"
+msgstr "Some rows were not received"
+
+msgid "rx.hint.incomplete"
+msgstr "The signal was interrupted. Restart listening and replay the sound from the beginning."
+
+msgid "rx.status.done"
+msgstr "Photo received!"
+
+msgid "rx.hint.done"
+msgstr "The sound turned into an image. You can save the photo as PNG."
+
+msgid "rx.status.stopped"
+msgstr "Listening stopped"
+
+msgid "rx.lines"
+msgstr "{rows} / 240 rows"
+
+msgid "rx.percent"
+msgstr "%{percent}"
+
+msgid "rx.error.decode"
+msgstr "Could not decode the sound. Restart listening."
+
+msgid "rx.error.worker"
+msgstr "Could not start the audio processor. Refresh the page and try again."
+
+msgid "rx.error.secure"
+msgstr "Open this page over HTTPS in Safari or Chrome for the microphone. An http:// address on the local network cannot enable the microphone on a phone."
+
+msgid "rx.error.notallowed"
+msgstr "Microphone permission was not granted. Allow the microphone in the browser's site settings and try again."
+
+msgid "rx.error.notfound"
+msgstr "No microphone found. Open this page on a phone or computer that has a microphone."
+
+msgid "rx.error.notreadable"
+msgstr "The microphone could not be opened. Close other apps using the microphone and try again."
+
+msgid "rx.error.generic"
+msgstr "The microphone could not start. Try again with an up-to-date Safari or Chrome."
+
+msgid "rx.signal.loud"
+msgstr "Sound is too loud. Lower the sending device's volume a little."
+
+msgid "rx.signal.quiet"
+msgstr "Very little sound. Move the device closer to the speaker."
+
+msgid "rx.signal.receiving"
+msgstr "Sound is being received. Transfer in progress."
+
+msgid "rx.signal.open"
+msgstr "Microphone is on. Waiting for the Robot36 start signal."
+
+msgid "tx.panel.title"
+msgstr "PHOTO TO SEND"
+
+msgid "tx.empty.title"
+msgstr "Choose a photo."
+
+msgid "tx.empty.text"
+msgstr "The photo stays on your device."
+
+msgid "tx.status.label"
+msgstr "SENDER"
+
+msgid "tx.title"
+msgstr "Turn your photo into sound."
+
+msgid "tx.text"
+msgstr "Open this section on the computer. On the phone, open “Receive photo” and start listening."
+
+msgid "tx.button.choose"
+msgstr "Choose photo"
+
+msgid "tx.button.camera"
+msgstr "Take photo"
+
+msgid "tx.button.sample"
+msgstr "Try without a photo: pick the colour card"
+
+msgid "tx.volume"
+msgstr "Volume"
+
+msgid "tx.button.play"
+msgstr "Play sound · Send photo"
+
+msgid "tx.button.stop"
+msgstr "Stop sending"
+
+msgid "tx.button.wav"
+msgstr "Download as WAV"
+
+msgid "tx.status.none"
+msgstr "Choose a photo or the colour card first."
+
+msgid "tx.status.ready"
+msgstr "Ready. Start listening on the phone first, then play the sound here."
+
+msgid "tx.status.sending"
+msgstr "Photo is being sent as sound. Do not play other sounds in the background."
+
+msgid "tx.status.done"
+msgstr "Sound finished. Check on the phone that the photo was received."
+
+msgid "tx.status.resend"
+msgstr "Ready. You can send the photo again."
+
+msgid "tx.status.wav"
+msgstr "WAV ready: 16 kHz · mono · 16-bit PCM."
+
+msgid "tx.file.none"
+msgstr "No photo selected yet"
+
+msgid "tx.error.size"
+msgstr "Please choose a photo smaller than 25 MB."
+
+msgid "tx.error.open"
+msgstr "This photo could not be opened. Choose it again as JPG, PNG or WebP."
+
+msgid "tx.error.encode"
+msgstr "Choose a photo first."
+
+msgid "tx.error.play"
+msgstr "The sound could not play. Open the page in Safari or Chrome and try again."
+
+msgid "tx.sample.name"
+msgstr "Robot36 colour card"
+
+msgid "tx.drop.hint"
+msgstr "You can also drag & drop or paste a photo."
+
+msgid "tx.bg.hidden"
+msgstr "The transfer was stopped because the page went to the background. Keep the screen on and restart."
+
+msgid "tx.mode"
+msgstr "The photo is fitted into the frame."
+
+msgid "dv.badge.offline"
+msgstr "offline"
+
+msgid "dv.qr.title"
+msgstr "QR code transfer"
+
+msgid "dv.qr.desc"
+msgstr "The photo is split into consecutive QR codes. Point the other device's camera at the screen — silent and fully offline."
+
+msgid "dv.qr.send"
+msgstr "Send with QR"
+
+msgid "dv.qr.stop"
+msgstr "Stop QR stream"
+
+msgid "dv.qr.receive"
+msgstr "Receive with camera"
+
+msgid "dv.qr.receiveStop"
+msgstr "Stop camera"
+
+msgid "dv.qr.save"
+msgstr "Save received photo"
+
+msgid "dv.qr.speed"
+msgstr "Frame duration"
+
+msgid "dv.qr.progress"
+msgstr "Received {got}/{total} frames"
+
+msgid "dv.qr.frameOf"
+msgstr "Showing frame {index} / {frames}"
+
+msgid "dv.qr.needPhoto"
+msgstr "Choose a photo in the “Send photo” tab first."
+
+msgid "dv.qr.generating"
+msgstr "Preparing QR frames…"
+
+msgid "dv.qr.noCamera"
+msgstr "The camera could not be opened."
+
+msgid "dv.qr.unsupported"
+msgstr "QR decoding needs the camera and jsQR; this browser does not support it."
+
+msgid "dv.qr.done"
+msgstr "Photo received via QR!"
+
+msgid "dv.qr.tooBig"
+msgstr "This photo is too large for the QR stream (over 1 MB). Choose a smaller one."
+
+msgid "dv.qr.hint"
+msgstr "The sending device shows the codes, the receiving device scans them. Keep a distance of 20–40 cm."
+
+msgid "dv.bt.title"
+msgstr "Bluetooth transfer"
+
+msgid "dv.bt.desc"
+msgstr "Send the photo over Bluetooth LE (Nordic UART) between two Web Bluetooth devices, or route the acoustic transfer to a Bluetooth speaker."
+
+msgid "dv.bt.pick"
+msgstr "Choose audio output"
+
+msgid "dv.bt.audioOk"
+msgstr "Output selected: {name}"
+
+msgid "dv.bt.audioFail"
+msgstr "Output selection is not supported in this browser."
+
+msgid "dv.bt.send"
+msgstr "Send via Bluetooth"
+
+msgid "dv.bt.receive"
+msgstr "Receive via Bluetooth"
+
+msgid "dv.bt.disconnect"
+msgstr "Disconnect"
+
+msgid "dv.bt.connected"
+msgstr "Connected: {name}"
+
+msgid "dv.bt.connecting"
+msgstr "Connecting…"
+
+msgid "dv.bt.disconnected"
+msgstr "Disconnected."
+
+msgid "dv.bt.progress"
+msgstr "Sending… {percent}%"
+
+msgid "dv.bt.done"
+msgstr "Photo sent over Bluetooth."
+
+msgid "dv.bt.received"
+msgstr "Photo received over Bluetooth!"
+
+msgid "dv.bt.unsupported"
+msgstr "This browser does not support Web Bluetooth. Use Chrome or Edge (desktop or Android)."
+
+msgid "dv.bt.failed"
+msgstr "Bluetooth connection failed. Make sure the other device is advertising the Nordic UART service."
+
+msgid "dv.bt.listening"
+msgstr "Waiting for a photo over Bluetooth…"
+
+msgid "dv.nfc.title"
+msgstr "NFC pairing"
+
+msgid "dv.nfc.desc"
+msgstr "Touch the phones back to back: the other one opens this page with the right role preselected."
+
+msgid "dv.nfc.write"
+msgstr "Write pairing tag"
+
+msgid "dv.nfc.read"
+msgstr "Read pairing tag"
+
+msgid "dv.nfc.ready"
+msgstr "Hold a tag or the other phone near the back."
+
+msgid "dv.nfc.written"
+msgstr "Tag written. It now opens this page in receive mode."
+
+msgid "dv.nfc.readOk"
+msgstr "Invite read — the other device opens in “{role}” mode."
+
+msgid "dv.nfc.unsupported"
+msgstr "Web NFC works on Chrome for Android only."
+
+msgid "dv.nfc.failed"
+msgstr "NFC operation failed. Hold the device steadier and try again."
+
+msgid "dv.nfc.role.rx"
+msgstr "receive"
+
+msgid "dv.nfc.role.tx"
+msgstr "send"
+
+msgid "dv.sound.title"
+msgstr "Sound check"
+
+msgid "dv.sound.desc"
+msgstr "Play the three SSTV calibration tones to verify the speaker path before a real transfer."
+
+msgid "dv.sound.play"
+msgstr "Play test tones"
+
+msgid "dv.sound.stop"
+msgstr "Stop tones"
+
+msgid "dv.sound.playing"
+msgstr "Playing 1500 → 1900 → 2300 Hz…"
+
+msgid "dv.sound.done"
+msgstr "Test finished."
+
+msgid "footer.privacy"
+msgstr "Photos and microphone audio are never uploaded to a server."
+
+msgid "footer.about"
+msgstr "How does SSTV work?"
+
+msgid "about.back"
+msgstr "← Back to the experiment"
+
+msgid "about.title"
+msgstr "There is a photo inside this sound."
+
+msgid "about.p1"
+msgstr "SSTV converts the brightness and colour of a photo into audio tones. The receiver measures these tones and rebuilds the image line by line."
+
+msgid "about.p2"
+msgstr "This experiment uses Robot36: a 320 × 240 colour image is sent in about 37 seconds together with a start signal. Other SSTV modes are not supported in this first version."
+
+msgid "about.p3"
+msgstr "On the phone, open the microphone first, then play the whole sound from the other device. Keep the phone close to the speaker, avoid excessive volume and background music. Keep the screen on during the transfer."
+
+msgid "about.p4"
+msgstr "Photo selection and sound decoding happen on your device. The app never uploads your photo or microphone audio to a server. Loading the page requires the internet once; the photo transfer itself happens over sound. After installation the app works fully offline."
+
+msgid "about.channels.title"
+msgstr "Four ways to move a photo"
+
+msgid "about.channels.sound"
+msgstr "Sound — the classic acoustic path. Works between any two devices with a speaker and a microphone, no pairing needed."
+
+msgid "about.channels.qr"
+msgstr "QR code — the photo is split into consecutive QR codes; the other device reads them with its camera. Silent and fully offline."
+
+msgid "about.channels.bt"
+msgstr "Bluetooth — the photo travels over Bluetooth LE between two Web Bluetooth devices, or the acoustic transfer plays on a Bluetooth speaker."
+
+msgid "about.channels.nfc"
+msgstr "NFC — a tap pairs the phones and opens the right role on each one."
+
+msgid "about.counters.title"
+msgstr "About the counters"
+
+msgid "about.counters.p"
+msgstr "The counters in the header are kept by a free counter service. They show the approximate number of different browsers and reception attempts; they do not measure unique people. The attempt counter increases when listening with the microphone starts successfully. A half-finished or missing image still counts; a completed one is not counted twice. If the microphone cannot open, no attempt is added. Offline, the counters are hidden."
+
+msgid "about.langs.title"
+msgstr "Languages"
+
+msgid "about.langs.p"
+msgstr "The interface speaks Turkish, English, German, Spanish, French, Arabic (right-to-left) and Simplified Chinese. Translations live in standard GNU gettext files (.po source, .mo compiled) under locales/ — send a pull request to add yours."
