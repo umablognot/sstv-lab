@@ -1,252 +1,219 @@
-# SSTV Lab — Fotoğrafı Ses Olarak Gönder
+# SSTV Lab — Fotoğrafı Sese Dönüştür
 
-[![GitHub Pages yayını](https://github.com/altunsumerve/sstv-lab/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/altunsumerve/sstv-lab/actions/workflows/deploy-pages.yml)
-[![Testler](https://github.com/altunsumerve/sstv-lab/actions/workflows/test.yml/badge.svg)](https://github.com/altunsumerve/sstv-lab/actions/workflows/test.yml)
-[![Lisans: MIT](https://img.shields.io/badge/Lisans-MIT-informational.svg)](LICENSE)
+[![Deploy to GitHub Pages](https://github.com/altunsumerve/sstv-lab/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/altunsumerve/sstv-lab/actions/workflows/deploy-pages.yml)
+[![Tests](https://github.com/altunsumerve/sstv-lab/actions/workflows/test.yml/badge.svg)](https://github.com/altunsumerve/sstv-lab/actions/workflows/test.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-informational.svg)](LICENSE)
+![i18n](https://img.shields.io/badge/i18n-7%20dil-c7fb67)
+![Offline](https://img.shields.io/badge/PWA-çevrimdışı--hazır-c7fb67)
 
-**Demo adresi (Pages yayını sonrasında): [SSTV Lab’i aç](https://altunsumerve.github.io/sstv-lab/)**
+**Demo adresi (Pages dağıtımından sonra): [SSTV Lab'i aç](https://altunsumerve.github.io/sstv-lab/)**
 
 *[English README](README.md)*
 
-Bu proje, SSTV’yi daha önce hiç duymamış kişiler dahil herkesin bu teknolojiyi mümkün olan en
-basit şekilde deneyimleyebilmesi için hazırlandı. Radyo veya elektronik bilgisi, özel donanım
-ya da ücretli yazılım gerektirmeden; bir telefon, bir bilgisayar ve bu cihazların hoparlör ve
-mikrofonlarıyla bir fotoğrafın ses üzerinden nasıl aktarılabildiğini keşfedebilirsin.
+Bu proje, radyo ya da elektronik bilgisi gerektirmeden herkesin SSTV'yi en basit hâlâ deneyebilmesi
+için oluşturuldu. Bir telefon, bir bilgisayar ve bunların dahili hoparlör ile mikrofonu yeterlidir.
+Fotoğraf, ses dalgaları hâlinde havadan gönderilir; karşı cihaz mikrofonuyla dinleyip görüntüyü
+satır satır yeniden kurar. Tarayıcıda çalışan bir **Robot36 SSTV** kodlayıcısı ve akustik
+çözücüdür. v2 ile birlikte aktarım artık yalnızca sesle sınırlı değil: QR kod akışı, Bluetooth LE
+bağlantısı ve NFC dokunuşu da tamamen çevrimdışı çalışır.
 
-Tarayıcıda çalışan **Robot36 SSTV** kodlayıcı ve akustik çözücü. Bir cihaz fotoğrafı hoparlöründen
-ses tonları olarak çalar; diğer cihaz mikrofonuyla dinler ve görüntüyü satır satır yeniden kurar.
-İki cihaz arasındaki tek bağlantı havadır.
+Uygulama kurulumu veya hesap gerekmez. Sayfayı iki cihazda açın, dahili renk kartıyla başlayın.
+PWA olarak yüklerseniz yedi dil dahil her şey **internetsiz** çalışır.
 
-Uygulama kurulumu veya üyelik gerekmez. Sayfayı iki cihazda açıp hazır renk kartıyla başlayabilirsin;
-alıcı mikrofonunu sesi çalan hoparlöre yakın tut.
-
-> **Gizlilik:** fotoğraflar ve mikrofon PCM verisi cihazdan çıkmaz — kodlama da çözme de tarayıcıda
-> yapılır. Resmî demoda, sayfa dosyalarına ek olarak ziyaret ve alım denemesi sayaçları için istek yapılır;
-> aşağıdaki **Canlı sayaçlar** bölümüne bak.
+> **Gizlilik:** fotoğraflar ve mikrofon sesi cihazdan asla çıkmaz — kodlama ve çözme tamamen
+> tarayıcıda olur. Resmî demoda ayrıca ziyaretçi ve deneme sayaçları güncellenir; ayrıntı için
+> **Canlı sayaçlar** bölümüne bakın.
 
 ---
 
-## Ne yapıyor
+## v2.0'da neler yeni
+
+| Alan | Eklenenler |
+|---|---|
+| **Çok dilli arayüz** | Tam gettext i18n: **Türkçe, İngilizce, Almanca, İspanyolca, Fransızca, Arapça (sağdan sola), Basitleştirilmiş Çince**. Standart `.po` kaynak + derlenmiş `.mo` kataloglar, sıfır bağımlılıklı çalışma zamanı (`i18n.js`), başlıkta dil seçici, `?lang=` parametresi, ziyaretçi bazlı kalıcılık. |
+| **Çevrimdışı çalışma** | Kurulabilir PWA (`manifest.webmanifest` + `sw.js`): ilk açılışta uygulamanın tamamı, tüm dillerin katalogları ve satıcı kodu önbelleğe alınır. Sonrasında ağ tamamen kapalıyken çalışır. Başlıkta çevrimiçi/çevrimdışı göstergesi. |
+| **QR kod kanalı** | Fotoğraf, **dahili saf-JS QR kodlayıcıyla** (`features/qr.js`, jsQR ile gidiş-dönüş testli) ardışık QR kodlarına bölünür. Karşı cihaz kamerasıyla dahili **jsQR** üzerinden okur. Sessiz, mikrofonsuz, tamamen çevrimdışı. |
+| **Bluetooth kanalı** | İki Web Bluetooth cihazı arasında **Bluetooth LE (Nordic UART)** ile fotoğraf aktarımı; ayrıca **ses çıkışı seçimi** (`selectAudioOutput` / `setSinkId`) ile akustik aktarımı Bluetooth hoparlöre yönlendirme. |
+| **NFC kanalı** | **Web NFC eşleştirme**: etiket yazın ya da iki telefonu değdirin — karşı telefon uygulaması doğru rolle (alıcı/gönderici) açılır. |
+| **Ses testi** | Gerçek aktarımdan önce hoparlör yolunu doğrulamak için tek dokunuşla 1500 → 1900 → 2300 Hz kalibrasyon tonları. |
+| **Masaüstü ve tablet** | Mobil öncelikli duyarlı tasarım; gerçek tablet (≥720 px) ve masaüstü (≥1080 px) kırılımları, hover durumları, klavye kısayolları (`1`/`2`/`3` sekmeler, `L` dinle, `Boşluk` gönder), fotoğraf için sürükle-bırak ve panodan yapıştırma, kamera ile çekim (`capture="environment"`). |
+| **Modern arayüz** | Yenilenen koyu tema: degrade başlık, segment sekmeler, kanal kartları, animasyonlu tarama çizgisi, tabular rakamlar, RTL desteği, `prefers-reduced-motion` uyumu, belirgin odak halkaları. |
+| **Araç zinciri** | `tools/msgfmt.mjs` — gettext kurmadan çalışan saf-Node `.po` → `.mo` derleyicisi. `tools/pocheck.mjs` — çevirmenler için anahtar tutarlılık denetimi. Yeni testler: QR gidiş-dönüş, msgfmt gidiş-dönüş, i18n bütünlüğü. |
+
+---
+
+## Gerçekte ne yapar
 
 | | |
 |---|---|
-| **Mod** | Robot36 (sabit — başka modlar otomatik algılanmaz) |
+| **Mod** | Robot36 (sabit — diğer modlar otomatik algılanmaz) |
 | **Çözünürlük** | 320 × 240, renkli |
-| **Aktarım süresi** | Görüntü başına ~37 sn |
-| **Ses bandı** | VIS 1100–1300 Hz; görüntü 1500–2300 Hz; senkronizasyon 1200 Hz |
-| **Çözücü örnekleme hızı** | 16 kHz üzerindeki cihaz hızları 16 kHz’e indirilir |
-| **Bağımlılık** | Yok. Derleme adımı yok, CDN yok, çalışma anında npm paketi yok |
+| **Aktarım süresi** | Görüntü başına ~37 sn (akustik yol) |
+| **Ses bandı** | VIS 1100–1300 Hz; görüntü 1500–2300 Hz; senk 1200 Hz |
+| **Çözücü örnekleme hızı** | 16 kHz üzeri cihaz hızları 16 kHz'e yeniden örneklenir |
+| **Diller** | tr · en · de · es · fr · ar (RTL) · zh-CN |
+| **Aktarım kanalları** | Ses (akustik) · QR kod akışı · Bluetooth LE (NUS) · NFC eşleştirme |
+| **Bağımlılıklar** | Çalışma zamanında yok. Derleme adımı, CDN, çalıştırmada npm paketi yok |
+
+### Kanal destek tablosu
+
+| Kanal | Gönderen gerekli | Alan gerekli | Çevrimdışı |
+|---|---|---|---|
+| Ses | Ses çıkarabilen her tarayıcı | Mikrofonlu + güvenli bağlam her tarayıcı | ✔ |
+| QR kod | Herhangi bir tarayıcı (dahili kodlayıcı) | Kamera + jsQR (güncel her tarayıcı) | ✔ |
+| Bluetooth | Chrome / Edge (masaüstü veya Android) | Nordic UART cihazıyla Chrome / Edge | ✔ |
+| NFC | Android'de Chrome | Android'de Chrome (veya NDEF okuyabilen telefon) | ✔ |
 
 ---
 
-## Nasıl kullanılır
+## Kullanım
 
-**İki cihaz** gerekir — biri çalar, diğeri dinler. Bu arayüz aynı anda tek rol çalıştırır;
-sesle aktarım deneyi için ikinci cihazı kullan.
+İki cihaz gerekir — biri çalar, biri dinler. Bu arayüz aynı anda tek rol çalıştırır; akustik
+deney için ikinci cihazı kullanın.
 
-1. **Telefonda:** canlı demoyu aç → *01 Fotoğraf al* → **Mikrofonla dinlemeyi başlat**, mikrofon
-   iznini ver.
-2. **Bilgisayarda:** aynı sayfayı aç → *02 Fotoğraf gönder* → **Fotoğraf seç** (fotoğraf seçmek
-   istemiyorsan renk kartı düğmesine bas).
-3. **Sesi çal**'a bas. Telefonu bilgisayarın hoparlörüne yaklaştır.
-4. Görüntü ~37 saniyede oluşur. **PNG kaydet** ile kaydet.
+1. **Telefonda:** canlı demoyu aç → *01 Fotoğraf al* → **Mikrofonla dinlemeyi başlat**,
+   mikrofon iznine izin ver.
+2. **Bilgisayarda:** aynı sayfayı aç → *02 Fotoğraf gönder* → **Fotoğraf seç** (ya da fotoğraf
+   seçmek istemiyorsanız renk kartı düğmesine basın). Dilerseniz fotoğrafı sürükleyip bırakabilir
+   veya panodan yapıştırabilirsiniz.
+3. **Sesi çal** düğmesine basın. Telefonu bilgisayar hoparlörüne yaklaştırın.
+4. Görüntünün ~37 saniyede oluşmasını izleyin. **PNG kaydet** ile saklayın.
 
-**Gerçekten fark yaratan ipuçları:**
+**İkinci cihaz yok mu?** *03 Kanallar* → **QR kod ile aktarım**: renk kartı (veya seçtiğiniz
+fotoğraf) QR kodları olarak akıtılır; başka bir kamerayla okutun — ya da alıcıyı aynı tablette
+bölünmüş pencerede çalıştırın.
 
-- İki sekmeyi de ön planda tut — tarayıcılar arka plandaki sekmelerin sesini askıya alır.
-- Ses seviyesi orta olsun. Kırpılma (clipping) FM sapmasını bozar ve rengi mahveder.
-- Bluetooth kulaklığı çıkar; codec'leri tonları bozuyor ve gecikme ekliyor.
-- Ortam sessiz olsun. 1–2,5 kHz bandındaki konuşma ve müzik tam sinyalin üstüne biniyor.
+**Çevrimdışı kullanım için yükleme:** Chrome/Edge'te (masaüstü veya Android) sayfayı açın →
+başlıktaki **Uygulamayı yükle** düğmesi ya da tarayıcı menüsü → *Ana ekrana ekle*. Artık uygulama
+Wi-Fi/mobil veri tamamen kapalıyken açılır ve çalışır.
+
+**Gerçekten işe yarayan ipuçları:**
+
+- İki sekmeyi de ön planda tutun — tarayıcılar arka plan sekmelerinde sesi askıya alır.
+- Orta ses seviyesi. Bozulma FM sapmasını bozar, renkleri mahveder.
+- *Akustik* yol için Bluetooth kulaklıkları çıkarın; kodekleri tonları bozar. (*Çalmayı* Bluetooth
+  hoparlöre yönlendirmek için bunun yerine *03 Kanallar*'daki çıkış seçimini kullanın.)
+- Sessiz oda. 1–2,5 kHz bandındaki konuşma ve müzik, sinyalin tam üstüne düşer.
+- QR akışı: 20–40 cm mesafe, sabit el, kare başına varsayılan ~400 ms (ayarlanabilir).
 
 ---
 
-## HTTPS neden şart
+## Diller ve çeviriler (`.po` / `.mo`)
 
-`getUserMedia()` (mikrofon erişimi) yalnızca **güvenli bağlamda** (secure context) çalışır:
+Arayüz standart GNU gettext katalogları olarak gelir:
 
-- `https://…` — çalışır (GitHub Pages'in doğru tercih olmasının sebebi tam olarak bu)
+```
+dist/locales/
+  tr/LC_MESSAGES/messages.po   ← kaynak dizgiler (referans küme)
+  tr/LC_MESSAGES/messages.mo   ← derlenmiş, tarayıcının yüklediği
+  en/… de/… es/… fr/… ar/… zh-CN/…
+```
+
+- Dizgiler `.po` dosyalarında; tarayıcı derlenmiş `.mo` dosyasını yükler.
+- Düzenledikten sonra yeniden derleyin (gettext kurulumu gerekmez):
+
+  ```bash
+  npm run build:i18n     # node tools/msgfmt.mjs — tüm diller için .po → .mo
+  npm run check:i18n     # node tools/pocheck.mjs — anahtar tutarlılık denetimi
+  ```
+
+- **Dil eklemek için:** `dist/locales/en/LC_MESSAGES/messages.po` dosyasını
+  `dist/locales/<kod>/LC_MESSAGES/messages.po` olarak kopyalayın, `msgstr` değerlerini çevirin ve
+  `npm run build:i18n` çalıştırın. Ardından kodu `dist/i18n.js` içindeki `SUPPORTED_LANGUAGES`
+  listesine, `dist/index.html` içindeki `<select>` alanına ve önbelleğe alınması için
+  `dist/sw.js` içindeki `LANGUAGES` dizisine ekleyin. Sağdan sola diller için yalnızca
+  `i18n.js` içindeki `RTL_LANGUAGES` listesine eklemek yeterli.
+- Dil seçim sırası: `?lang=` URL parametresi → ziyaretçinin önceki seçimi → tarayıcı dilleri →
+  İngilizce yedek. `<html lang>` / `dir` öznitelikleri otomatik güncellenir.
+
+---
+
+## Çevrimdışı çalışır (PWA)
+
+- `manifest.webmanifest`; simgeleri (maskable dahil), tema renklerini ve Al/Gönder kısayollarını tanımlar.
+- `sw.js` ilk ziyarette uygulamanın tamamını önbelleğe alır: sayfalar, stiller, DSP kodu, QR
+  kodlayıcı, jsQR, simgeler ve **yedi dilin derlenmiş katalogları**.
+- Strateji: aynı kaynaklı GET'ler için arka planda tazelemeli cache-first; gezinmeler önbellekteki
+  `index.html`e düşer; harici sayaç API'si aynen geçer ve çevrimdışında sessizce susar.
+- HTTPS üzerinden sunun (GitHub Pages idealdir). Yerel geliştirme için `http://127.0.0.1` de çalışır.
+
+---
+
+## HTTPS neden önemli
+
+`getUserMedia()` (mikrofon erişimi) yalnızca **güvenli bağlamda** çalışır:
+
+- `https://…` — çalışır (bu yüzden GitHub Pages doğru barındırıcıdır)
 - `http://127.0.0.1:5188` — çalışır (localhost güvenli sayılır)
 - `http://192.168.x.x:5188` — **mikrofon engellenir**
 
-Yani yerel ağda düz HTTP ile sayfayı önizleyip ses *gönderebilirsin*, ama telefonun *alıcı* olması
-için gerçek HTTPS gerekir. Telefon denemelerinde yayınlanmış Pages adresini kullan.
+Yani yerel ağda sayfayı önizleyebilir ve düz HTTP ile *ses gönderebilirsiniz*, ancak telefon
+yalnızca gerçek HTTPS ile *alım* yapabilir. Telefon testleri için dağıtılmış Pages adresini kullanın.
 
 ---
 
 ## Canlı sayaçlar
 
-Başlıkta iki sayı var; [countapi.mileshilliard.com](https://countapi.mileshilliard.com) tutuyor —
-üyeliksiz ve API key'siz ücretsiz bir sayaç servisi:
-
-| Sayaç | Neyle artıyor |
-|---|---|
-| **ZİYARETÇİ** | Bir tarayıcıdan gelen ilk ziyaret. `localStorage` işareti sayesinde sayfa yenilemeleri tekrar saymaz; yani sayfa açılışını değil tarayıcıyı sayar. |
-| **ALIM DENEMESİ** | Mikrofonla dinlemenin başarıyla başlatıldığı her deneme. Yarım kalan, kesilen veya hiç satır oluşmayan denemeler de sayılır. Görüntünün tamamlanması ayrıca sayılmaz. |
-
-Dinlemeyi durdurup yeniden başlatmak yeni deneme sayılır. Dinleme açıkken görüntüyü temizlemek
-sayacı artırmaz. Mikrofon izni reddedilirse veya mikrofon başlatılamazsa sayılmaz. Bu sayı kişi
-veya başarılı fotoğraf sayısı değil, deneme sayısıdır. Önceki tamamlanan fotoğraf sayacından ayrı
-bir sayaç anahtarı kullanılır; geçmişte sayılmayan yarım denemeler geriye dönük getirilemez.
-
-Uygulama sayaç anahtarını gönderir; fotoğraf, ses veya kullanıcı kimliği göndermez. İsteklere
-çerezler ve sayfa yönlendirme bilgisi eklenmez. Ancak sayaç hizmeti, her web hizmeti gibi, isteğin
-IP adresini ve olağan bağlantı bilgilerini görebilir.
-
-Dürüst uyarılar:
-
-- Sayaçlar kullanım hakkında yaklaşık bir fikir verir; doğrulanmış istatistikler değildir.
-- Bu yaklaşık bir tarayıcı sayısıdır; benzersiz kişi sayısı değildir. Site verisini temizlemek,
-  başka tarayıcı kullanmak, depolamayı engellemek veya eşzamanlı ilk ziyaretler tekrar sayılabilir.
-- Sayaçlar yalnızca `https://altunsumerve.github.io/sstv-lab/` adresinde çalışır. Yerel önizleme,
-  geçici HTTPS tünelleri ve çatallanmış depolar sayıları artırmaz. Kendi yayının için
-  `dist/counter.js` içindeki adresi, yolu ve sayaç anahtarlarını değiştir.
-- İstekler altı saniyede zaman aşımına uğrar. Ulaşılamayan sayaç boş kalır; ikisi de
-  başarısızsa panel gizlenir.
-  SSTV uygulaması hiçbir zaman sayacı beklemez ve sayaç yüzünden bozulmaz.
-- Bu, kesintisiz çalışma garantisi olmayan harici bir servistir. SSTV deneyi bu servise bağlı değildir.
+Başlıktaki iki sayı yalnızca resmî demoda [countapi](https://countapi.mileshilliard.com) tarafından
+tutulur. Yaklaşık tarayıcı sayısı ve alım denemesidir; benzersiz kişi sayısı değildir. Çevrimdışında
+sessizce gizlenir ve yerel önizlemelerde ya da fork'larda asla artmaz.
 
 ---
 
-## Yerelde çalıştırma
+## Geliştirme
 
 ```bash
-git clone https://github.com/altunsumerve/sstv-lab.git
-cd sstv-lab
-npm run dev
+npm run dev            # http://127.0.0.1:5188 üzerinde statik sunucu
+npm test               # DSP gidiş-dönüş + kare testleri + QR gidiş-dönüş + msgfmt
+                       # gidiş-dönüş + i18n bütünlüğü + pocheck + sayaç testleri
+npm run test:acoustic  # kodla → WAV → akustik çözme benzetimi
+npm run test:browser   # Playwright uçtan uca (önce `npx playwright install`)
 ```
 
-`dist/` klasörünü `http://127.0.0.1:5188` adresinde sunar; ayrıca `0.0.0.0` üzerinden dinler ve
-başka bir cihazdan açabilmen için tüm yerel ağ adreslerini terminale yazar. Windows güvenlik duvarı
-özel ağda gelen TCP 5188 bağlantılarına izin vermeli.
-
-Node.js 20+ gerekir; 22 veya daha yenisi önerilir. Çalışma zamanı bağımlılığı yoktur — `npm install` sadece Playwright
-tarayıcı testi için gerekir.
-
----
-
-## Testler
-
-```bash
-npm test              # DSP ve sayaç testleri, tarayıcı gerekmez
-npm run test:acoustic # akustik bozulma taraması
-npm run test:browser  # tam tarayıcı hattı (Playwright + :5188'de dev sunucu ister)
-```
-
-`npm test` bir renk kartı görüntüsünü kodlar ve **16 / 44,1 / 48 kHz**'de geri çözer, sonra şunları
-doğrular:
-
-- 240 satırın tamamı çözüldü mü,
-- ortalama renk hatası eşiğin altında mı (renk kartı testinde tipik olarak < 1 / 255),
-- yapay yankı ve gürültü eklenmiş kısık sinyal hâlâ çözülüyor mu (hata ≈ 4,5 / 255),
-- sessizlikten görüntü **üretilmiyor** mu,
-- yarım kalan aktarım "tamamlandı" diye **raporlanmıyor** mu.
-
-`test-output/reference.wav` varsa — [pySSTV](https://github.com/dnet/pySSTV) ile üretilmiş bir kayıt —
-o da çözülür. Bu, çözücünün sadece kendi kodlayıcımızla değil, bağımsız bir kodlayıcıyla da
-uyuştuğunun kanıtıdır.
-
-`npm run test:browser` gerçek sayfayı Playwright ile sahte mikrofon aygıtı üzerinden sürer: masaüstü
-ve mobil boyut, WAV indirme, başlat/durdur, izin reddi ve tam Web Audio → AudioWorklet → Worker →
-canvas akışı. Önce Playwright'ı kur:
-
-```bash
-npm install
-npx playwright install chromium
-npm test
-# İkinci terminalde npm run dev açıkken:
-npm run test:browser
-```
-
-Test çıktıları `test-output/` altına düşer, bu klasör Git'e girmez.
-
----
-
-## Nasıl çalışıyor
-
-**Kodlayıcı** (`dist/encoder.js`) — fotoğraf 320 × 240 bir canvas'a çizilir, YUV'a çevrilir ve
-Robot36 ton dizisine dönüştürülür: önce VIS başlığı, sonra her satır için 1200 Hz senkronizasyon
-darbesi, bir parlaklık (luminance) taraması ve dönüşümlü R−Y / B−Y renk bilgisi. Robot36 rengi
-dikeyde yarı hızda gönderir; 320 × 240'ın 37 saniyeye sığmasının sebebi budur.
-
-**Çözücü** (`dist/receiver.js` + `dist/vendor/`) — arayüzün işini azaltmak için ayrı bir Worker’da çalışır:
-
-1. `capture-worklet.js` mikrofondan audio thread üzerinde kesintisiz örnek blokları alır.
-   `ScriptProcessor` yalnızca eski tarayıcılar için yedektir. `AnalyserNode` bilerek **kullanılmıyor**
-   — kare düşürüp tekrarlıyor, bu da satır zamanlamasını sessizce bozuyor.
-2. `resampler.js` 16 kHz üzerindeki cihaz hızlarını kesintisiz bir filtreyle 16 kHz’e indirir.
-3. Tonlar kompleks taban banda kaydırılır, FIR filtreden geçirilir ve **FM demodülasyonu** yapılır —
-   anlık frekans, pikselin değeridir.
-4. Alıcı, Robot36 VIS kodunu ve eşlik bitini doğrular; ardından 150 ms satır saatini izler.
-   Senkronizasyon darbeleri saat kaymasını düzeltir. Kaçırılan bir darbe veya bozulan renk ayracı
-   satır silinmesine ya da renk kanallarının karışmasına yol açmaz. Uzun kesintiden sonra
-   yeni ve geçerli bir başlık, yeni görüntüyü başlatır.
-
-Son satır, kendisinden sonraki senkronizasyon darbesi beklenmeden yazılır — beklenseydi her görüntü
-bir satır eksik biterdi.
-
----
-
-## Dosya yapısı
+Proje düzeni:
 
 ```
-dist/                    statik site — GitHub Pages'in yayınladığı klasör tam olarak burası
-  index.html             iki sekmeli arayüz (al / gönder)
-  about.html             SSTV'nin sade dille anlatımı
-  app.js                 arayüz, mikrofon yaşam döngüsü, wake lock, WebMCP araç kaydı
-  encoder.js             Robot36 kodlayıcı + WAV yazıcı
-  receiver.js            çözücü durum makinesi ve görüntü birleştirme
-  resampler.js           herhangi bir örnekleme hızından 16 kHz'e
-  capture-worklet.js     AudioWorklet mikrofon yakalama
-  decode-worker.js       alıcıyı saran Worker
-  counter.js             ziyaret / alım denemesi sayaçları (çevrimdışıyken sessizce kapanır)
-  style.css
-  vendor/                smolgroot/sstv-decoder'dan uyarlanan DSP (0BSD)
-  THIRD_PARTY.txt
-serve.mjs                bağımlılıksız statik geliştirme sunucusu
-tools/                   test betikleri (siteye dahil edilmez)
-.github/workflows/       CI ve Pages yayını
+dist/                     ← uygulamanın tamamı (Pages'e olduğu gibi dağıtılır)
+  app.js                  ← arayüz bağlantıları, alıcı/gönderici durum makineleri
+  i18n.js                 ← sıfır bağımlılıklı gettext çalışma zamanı (.mo ayrıştırıcı)
+  encoder.js              ← Robot36 kodlayıcı + WAV yazıcı
+  receiver.js / resampler.js / capture-worklet.js / decode-worker.js
+  vendor/                 ← fm-demodulator, sync-detector, jsQR
+  features/               ← qr.js (QR kodlayıcı), qr-transfer.js,
+                            bluetooth.js, nfc.js, audioio.js
+  locales/                ← tr, en, de, es, fr, ar, zh-CN için .po + .mo
+  manifest.webmanifest, sw.js, icons/
+tools/                    ← testler + msgfmt.mjs + pocheck.mjs
+docs/                     ← GITHUB_ISSUE.md, CHANGELOG.md
 ```
 
----
+### Test öne çıkanları
 
-## Yayınlama
-
-`main` dalına gönderim, DSP, sayaç ve akustik testlerini çalıştırır; geçerlerse `dist/`
-GitHub Pages’e yayınlanır. Depoya yalnızca `dist/` değil, `.github/workflows/` dahil tüm kaynak
-dosyalarını yükle.
-
-Yeni repoda tek seferlik ayar: **Settings → Pages → Source → GitHub Actions**.
-
-Sitedeki tüm yollar göreli (relative) olduğu için `/sstv-lab/` alt yolunda hiçbir değişiklik
-gerekmeden çalışır. `dist/.nojekyll` dosyası Jekyll'in dosyalara dokunmasını engeller.
-
----
-
-## Sınırlar — issue açmadan önce oku
-
-- **Sadece Robot36.** Scottie, Martin ve PD modları ne uygulandı ne de otomatik algılanıyor.
-- **Gerçek ortam koşulları sonucu etkiler.** Oda akustiği, hoparlör kalitesi, saat sapması ve
-  işletim sistemi seviyesindeki AGC / gürültü bastırma sonuca etki eder. Gürültülü bir oda ya da
-  kırpan bir hoparlör satır kaybına veya renk hatasına yol açar.
-- **Devam ettirme yok.** Uzun kesintiden sonra sesi baştan çal. Yeni bir geçerli başlık,
-  yarım görüntüye eklemek yerine yeni bir görüntü başlatır.
-- **Yarım kalan aktarım asla başarı olarak raporlanmaz.** Bu bilinçli bir tercih.
-- Sayfa arka plana alınınca veya kapanınca mikrofon ve oynatma durur. Tarayıcı destekliyorsa Screen
-  Wake Lock kullanılır.
+- `tools/test-qr.mjs`, üretilen her QR matrisini piksellendirip satıcı jsQR ile geri çözer —
+  kodlayıcı bağımsız bir çözücüye karşı doğrulanır; kapasite tabloları (`v1-L = 17 B …
+  v40-L = 2953 B`) ve parçalı `SQ` çerçevelemesi dahil.
+- `tools/test-msgfmt.mjs`, yedi katalog için `.po → .mo → ayrıştırma` gidiş-dönüşü yapar.
+- `tools/test-i18n.mjs`, 152 uygulama anahtarı × 7 dili, her yerde aynı `{rows}`, `{percent}` …
+  yer tutucularıyla doğrular.
+- `tools/test-browser.cjs`, sahte mikrofon olarak kayıtlı bir WAV ile gerçek Chromium'u akustik
+  hattın başından sonuna kadar sürer; dilleri değiştirir, QR kareleri akıtır ve sıfır sayfa hatası
+  doğrular.
 
 ---
 
-## Kaynaklar
+## Güvenlik ve gizlilik notları
 
-- DSP yardımcıları [smolgroot/sstv-decoder](https://github.com/smolgroot/sstv-decoder) projesinden
-  (commit `ad3f3e0c`) 0BSD lisansıyla uyarlandı; o da
-  [xdsopl/robot36](https://github.com/xdsopl/robot36) kökenli. Tam lisans metni
-  [`dist/THIRD_PARTY.txt`](dist/THIRD_PARTY.txt) içinde. `tools/vendor.mjs` dönüştürme betiğidir,
-  çalışma anında hiç çalıştırılmaz.
-- Robot36 kodlayıcı zamanlamaları [pySSTV](https://github.com/dnet/pySSTV) (commit `d998fad1`) ile
-  bağımsız olarak doğrulandı.
-- Fotoğraf kodlayıcı ve kare birleştirici bu proje için yazıldı.
+- Fotoğraflar ve mikrofon PCM'i asla yüklenmez; yukarıda açıklanan isteğe bağlı sayaç istekleri
+  dışında analitik yoktur.
+- Service worker yalnızca aynı kaynaklı yanıtları önbelleğe alır.
+- Web Bluetooth istekleri Nordic UART servisi yayınlayan cihazlarla sınırlıdır; Web NFC yalnızca
+  bu uygulamanın kendi davet kayıtlarını yazar/okur.
+- `test-output/` (bk. sabitler, ekran görüntüleri) yerelde üretilir ve git'e eklenmez.
+
+---
 
 ## Lisans
 
-MIT — bkz. [LICENSE](LICENSE). Uyarlanan DSP kodu 0BSD altında kalır.
+MIT — bkz. [LICENSE](LICENSE). Üçüncü taraf kodlar [dist/THIRD_PARTY.txt](dist/THIRD_PARTY.txt)
+içinde belgelenir: sstv-decoder uyarlaması (0BSD), jsQR (MIT), Nayuki QR-Code-generator'ından
+uyarlanan QR kapasite tabloları (MIT).

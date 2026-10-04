@@ -1,10 +1,10 @@
 {
   "name": "sstv-lab",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
-  "description": "Browser-based Robot36 SSTV encoder and acoustic decoder. Send a photo as sound from one device, decode it with the microphone of another.",
-  "keywords": ["sstv", "robot36", "web-audio", "dsp", "fm-demodulation", "ham-radio", "audioworklet"],
+  "description": "Browser-based Robot36 SSTV encoder and acoustic decoder — multilingual (gettext .po/.mo), installable and fully offline, with QR, Bluetooth and NFC transfer channels on phone, tablet and desktop.",
+  "keywords": ["sstv", "robot36", "web-audio", "dsp", "fm-demodulation", "ham-radio", "audioworklet", "pwa", "offline-first", "i18n", "gettext", "web-bluetooth", "web-nfc", "qr-code"],
   "homepage": "https://altunsumerve.github.io/sstv-lab/",
   "repository": {
     "type": "git",
@@ -20,7 +20,9 @@
   },
   "scripts": {
     "dev": "node serve.mjs",
-    "test": "node tools/test-dsp.mjs && node tools/test-frame.mjs && node --test tools/test-counter.mjs tools/test-attempt-lifecycle.mjs",
+    "build:i18n": "node tools/msgfmt.mjs",
+    "check:i18n": "node tools/pocheck.mjs",
+    "test": "node tools/test-dsp.mjs && node tools/test-frame.mjs && node tools/test-qr.mjs && node tools/test-msgfmt.mjs && node tools/test-i18n.mjs && node tools/pocheck.mjs && node --test tools/test-counter.mjs tools/test-attempt-lifecycle.mjs",
     "test:acoustic": "node tools/test-acoustic.mjs",
     "test:browser": "node tools/test-browser.cjs"
   },
